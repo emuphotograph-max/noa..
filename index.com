@@ -351,5 +351,140 @@
         
         <div class="grid gap-4">
             <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6
-...
+                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
+                        <i data-lucide="camera" class="w-4 h-4 text-pink"></i> 撮影について
+                    </span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 opacity-40 transition-transform accordion-chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[13px] leading-loose opacity-70 border-t border-brown/5 pt-8 space-y-4">
+                        <p>カメラマンが、準備、撮影、編集、納品まで一人で行っております。アシスタントはおりませんので、パパ・ママにお子様の笑顔の引き出しにご協力をお願いしております。</p>
+                        <p>衣装はお客様ご自身でご準備いただくスタイルです。日程確定後、事前お振込みをお願いしております。</p>
+                        <p>施設での撮影の場合、入場料・駐車場・場所代等は実費負担をお願いしております。撮影許可はお客様ご自身で取得をお願いいたします。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
+                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
+                        <i data-lucide="image" class="w-4 h-4 text-pink"></i> 撮影データについて
+                    </span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 opacity-40 transition-transform accordion-chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[13px] leading-loose opacity-70 border-t border-brown/5 pt-8 space-y-4">
+                        <p>セレクトはカメラマンにお任せいただいております。納期は約1週間。オンラインアルバムでの納品となります。</p>
+                        <p>データの著作権は当社に帰属します。SNS等の掲載不可の場合は事前にお知らせください。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
+                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
+                        <i data-lucide="info" class="w-4 h-4 text-pink"></i> キャンセルポリシー
+                    </span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 opacity-40 transition-transform accordion-chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[13px] leading-loose opacity-70 border-t border-brown/5 pt-8">
+                        <p>仮予約は無料。本予約後は1ヶ月前まで無料。1ヶ月前〜前日50%、当日100%頂戴します。※雨天・体調不良による延期は無料です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <a href="https://www.instagram.com/noa.photo33" target="_blank" class="inline-flex items-center gap-4 px-10 py-4 bg-white rounded-full shadow-sm hover:bg-pink hover:text-white transition-all border border-pink/10 group">
+                <i data-lucide="instagram" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
+                <span class="text-sm font-medium tracking-widest italic">Instagram @noa.photo33</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 9. Flow -->
+    <section class="py-24 px-6 max-w-lg mx-auto fade-up pb-48">
+        <h2 class="text-2xl font-medium tracking-widest text-center mb-16 italic">Flow</h2>
+        <div class="space-y-12 relative">
+            <div class="absolute left-5 top-0 bottom-0 w-[1px] bg-pink/20"></div>
+            
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-white border-2 border-pink/30 flex items-center justify-center text-xs font-bold text-pink z-10 shadow-sm flex-shrink-0 mt-1 italic">01</div>
+                <div>
+                    <p class="text-base font-medium mb-2">公式LINEで無料相談</p>
+                    <a href="https://lin.ee/E7yPvDr" target="_blank" class="text-xs text-pink underline underline-offset-8 font-bold">こちらから友だち追加</a>
+                </div>
+            </div>
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-xs font-bold z-10 shadow-md flex-shrink-0 mt-1 italic">02</div>
+                <p class="text-base font-medium pt-2">ご予約確定・事前お振込み</p>
+            </div>
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-xs font-bold z-10 shadow-md flex-shrink-0 mt-1 italic">03</div>
+                <p class="text-base font-medium pt-2">撮影当日</p>
+            </div>
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-xs font-bold z-10 shadow-md flex-shrink-0 mt-1 italic">04</div>
+                <p class="text-base font-medium pt-2">データ納品（約1週間）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 px-6 text-center fade-up bg-pink/5 relative overflow-hidden">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-medium mb-10 leading-relaxed">何気ない今日が、<br>一生の宝物になります。</h2>
+            <p class="text-sm opacity-60 mb-12">未来のあなたへ、今の輝きを届けませんか。</p>
+            <a href="https://lin.ee/E7yPvDr" target="_blank" rel="noopener noreferrer" class="inline-flex flex-col items-center gap-4 group">
+                <div class="bg-pink text-white w-24 h-24 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                    <i data-lucide="message-circle" class="w-10 h-10"></i>
+                </div>
+                <span class="text-xs font-bold tracking-[0.4em] mt-2">公式LINEで予約・相談</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] tracking-[0.4em] opacity-40 uppercase">
+        <p>&copy; noa photo | hiroshima photographer akemi</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('is-visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const isOpen = btn.classList.contains('is-open');
+                const chevron = btn.querySelector('.accordion-chevron');
+                const icon = btn.querySelector('.accordion-icon');
+                
+                if (!isOpen) {
+                    btn.classList.add('is-open');
+                    content.classList.add('is-open');
+                    if(chevron) chevron.style.transform = 'rotate(180deg)';
+                    if(icon) {
+                        icon.style.transform = 'rotate(45deg)';
+                        icon.setAttribute('data-lucide', 'x');
+                    }
+                } else {
+                    btn.classList.remove('is-open');
+                    content.classList.remove('is-open');
+                    if(chevron) chevron.style.transform = 'rotate(0deg)';
+                    if(icon) {
+                        icon.style.transform = 'rotate(0deg)';
+                        icon.setAttribute('data-lucide', 'plus');
+                    }
+                }
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
