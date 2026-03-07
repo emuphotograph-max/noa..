@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>noa photo | 広島 出張撮影・おうちフォトスタジオ</title>
+    <title>noa photo | 広島 出張撮影 ・おうちフォトスタジオ</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
