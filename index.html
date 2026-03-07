@@ -1,1 +1,492 @@
-# noa..
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noa photo | 広島 出張撮影 ・おうちフォトスタジオ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts: Zen Maru Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        beige: '#Faf8f5',   
+                        brown: '#6B5A52',   
+                        pink: '#D2A1A1',    
+                        btnBrown: '#7C6154' 
+                    },
+                    fontFamily: {
+                        sans: ['"Zen Maru Gothic"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-content.is-open {
+            max-height: 1000px;
+        }
+        
+        .soft-shadow { box-shadow: 0 15px 40px rgba(107, 90, 82, 0.08); }
+        .bg-glass { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); }
+        
+        .img-zoom { overflow: hidden; position: relative; }
+        .img-zoom img { transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .img-zoom:hover img { transform: scale(1.05); }
+
+        .deco-line {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, #D2A1A1, transparent);
+        }
+    </style>
+</head>
+<body class="bg-beige text-brown font-sans leading-loose tracking-wide overflow-x-hidden">
+
+    <!-- 予約ボタン -->
+    <a href="https://lin.ee/E7yPvDr" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 bg-pink text-white rounded-full py-4 px-8 shadow-2xl flex items-center justify-center gap-2 hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-300">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span class="font-bold text-sm tracking-widest">ご予約・ご相談</span>
+    </a>
+
+    <!-- 1. Hero Section -->
+    <section class="min-h-[50vh] flex flex-col items-center justify-center text-center px-6 pt-24 pb-12 relative">
+        <div class="fade-up">
+            <p class="text-[10px] md:text-xs tracking-[0.4em] text-pink mb-6 font-bold uppercase">Hiroshima Photography Studio</p>
+            <h1 class="text-2xl md:text-4xl lg:text-5xl leading-relaxed font-medium mb-8">
+                何気ない今日が、<br>一生の宝物になる。
+            </h1>
+            <p class="text-xs md:text-sm opacity-60 leading-relaxed font-light tracking-[0.2em]">
+                出張撮影 ＆ おうちフォトスタジオ noa photo
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. Strategic Top Visual -->
+    <section class="pb-24 px-6 max-w-6xl mx-auto fade-up">
+        <div class="grid grid-cols-12 gap-4 md:gap-6">
+            <div class="col-span-12 md:col-span-7 img-zoom rounded-[40px] shadow-lg overflow-hidden h-[400px] md:h-[650px]">
+                <img src="https://i.ibb.co/C3FSQPs9/IMG-6881.jpg" alt="マタニティフォト" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/5"></div>
+                <div class="absolute bottom-10 left-10 text-white">
+                    <p class="text-[10px] tracking-[0.3em] uppercase mb-2 opacity-80">Maternity Photo</p>
+                    <p class="text-lg md:text-xl font-medium tracking-widest">愛おしい、はじまりの時間。</p>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-5 flex flex-col gap-4 md:gap-6">
+                <div class="img-zoom rounded-[40px] shadow-lg overflow-hidden h-[300px] md:h-[380px]">
+                    <img src="https://i.ibb.co/N665YNxp/IMG-6881.jpg" alt="成人式" class="w-full h-full object-cover"> alt="成人式前撮り" class="w-full h-full object-cover">
+                    <div class="absolute top-6 right-6 bg-white/70 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] tracking-tighter opacity-70 italic font-bold">Growing up</div>
+                </div>
+                <div class="bg-white/60 p-8 md:p-10 rounded-[40px] flex-grow flex flex-col justify-center border border-white/50 shadow-sm">
+                    <p class="text-xs md:text-sm leading-loose opacity-80">
+                        お腹の中にいた子が、<br>
+                        いつか鮮やかな振袖を纏う日まで。<br><br>
+                        その一瞬一瞬に寄り添い、<br>
+                        光あふれる一枚を残します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Concept -->
+    <section class="py-24 px-6 max-w-3xl mx-auto text-center fade-up">
+        <div class="flex flex-col items-center mb-12">
+            <div class="deco-line mb-8"></div>
+            <h2 class="text-lg font-medium tracking-widest opacity-40 italic">Concept</h2>
+        </div>
+        <div class="space-y-8 text-sm md:text-base opacity-90 leading-loose">
+            <p>ご覧いただきありがとうございます。<br>広島市東区、広島第一病院近くの一軒家2階にある<br>小さなフォトスタジオ noa photo です。</p>
+            <p>広島市を中心に、安芸郡府中町・海田町・呉市・東広島・廿日市などで<br>出張撮影も行っています。</p>
+            
+            <div class="py-12 relative">
+                <div class="absolute inset-0 flex items-center justify-center -z-10">
+                    <span class="text-7xl md:text-9xl text-pink/5 font-serif italic select-none">noa</span>
+                </div>
+                <p class="font-medium text-pink text-xl mb-4 leading-relaxed italic">noa photoが大切にしているのは<br>「あなたが主役の写真」</p>
+                <p>お客様一人ひとりの雰囲気や空気感を大切にしながら、<br>光の入り方や構図、自然な表情の瞬間を<br>プロの視点で丁寧に切り取ります。</p>
+            </div>
+
+            <p>写真が苦手な方や小さなお子さまでも安心して撮影できるよう、<br>おしゃべりをしながらリラックスした空気の中で撮影しています。<br>撮影の時間そのものも大切な思い出になるように。</p>
+            <p>写真を見るたびにその日の気持ちや空気感がよみがえるような、<br>あたたかく、長く大切にしていただける写真を<br>心を込めてお届けします。</p>
+        </div>
+    </section>
+
+    <!-- 4. Selected Reason -->
+    <section class="py-24 px-6 max-w-[750px] mx-auto fade-up">
+        <h2 class="text-xl font-medium tracking-widest text-center mb-16 italic">noa photo が選ばれる理由</h2>
+        
+        <div class="grid gap-4">
+            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
+                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
+                    <div class="flex items-center gap-5">
+                        <span class="text-2xl font-bold text-pink/30">01</span>
+                        <span class="text-[15px] font-medium tracking-wide">医療現場10年の経験</span>
+                    </div>
+                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+                        産婦人科・皮膚科・整形外科など医療の現場で約10年勤務してきました。赤ちゃんや小さなお子さま、ママの体調やペースを大切にしながら安心して撮影していただける環境を心がけています。
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
+                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
+                    <div class="flex items-center gap-5">
+                        <span class="text-2xl font-bold text-pink/30">02</span>
+                        <span class="text-[15px] font-medium tracking-wide">心と身体に寄り添うケア経験</span>
+                    </div>
+                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+                        アロマ・エステ・カウンセリングなど約10年間、心と身体のケアに携わってきました。その経験を活かし、お客様がリラックスできる空気づくりを大切にしています。
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
+                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
+                    <div class="flex items-center gap-5">
+                        <span class="text-2xl font-bold text-pink/30">03</span>
+                        <span class="text-[15px] font-medium tracking-wide">800件以上の撮影実績</span>
+                    </div>
+                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+                        これまで 800件以上の撮影実績 があります。ニューボーン、七五三、家族写真など大切な節目を安心してお任せいただけます。
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
+                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
+                    <div class="flex items-center gap-5">
+                        <span class="text-2xl font-bold text-pink/30">04</span>
+                        <span class="text-[15px] font-medium tracking-wide">ママだからこそ分かる大切な瞬間</span>
+                    </div>
+                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+                        自身も子育てをしながら「今しかないこの瞬間の大切さ」を実感しています。その一瞬一瞬を未来に残る宝物として写真に残します。
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
+                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
+                    <div class="flex items-center gap-5">
+                        <span class="text-2xl font-bold text-pink/30">05</span>
+                        <span class="text-[15px] font-medium tracking-wide">写真だけでなく“思い出の時間”を</span>
+                    </div>
+                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+                        撮影の時間そのものも大切な思い出になるように。おしゃべりをしながら楽しくリラックスした空間で自然な表情を撮影します。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Profile -->
+    <section class="py-24 px-6 max-w-5xl mx-auto fade-up my-12">
+        <div class="bg-white/40 rounded-[60px] p-8 md:p-20 shadow-sm border border-white/50">
+            <h2 class="text-xl font-medium tracking-widest text-center mb-16 uppercase italic">Profile</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div class="w-full md:w-2/5 flex flex-col items-center">
+                    <div class="w-48 h-48 mb-8 overflow-hidden rounded-full border-8 border-white shadow-lg">
+                        <img src="https://i.ibb.co/Z6BwnSM2/IMG-6653.jpg" alt="akemi" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm font-bold tracking-widest text-pink uppercase italic">Photographer / akemi</p>
+                </div>
+                <div class="w-full md:w-3/5 text-center md:text-left text-sm md:text-base opacity-90 space-y-6">
+                    <h3 class="text-xl font-medium text-pink leading-relaxed">はじめまして<br>着付けもできる3児のカメラマン akemiです。</h3>
+                    <p>山口県宇部市出身。島根・東京・茨城・福岡・山口・広島と、さまざまな地域で暮らしてきました。</p>
+                    <p>医療の現場で約10年間、アロマ・エステ・カウンセリングなどのケアに10年。心と身体のケアに長く携わってきました。</p>
+                    <p>39歳、末っ子の妊娠中に「この可愛い瞬間を残したい」という想いからカメラの世界へ。現在までに800件以上の撮影実績があります。</p>
+                    <p>医療・ケア・美容・母としての経験を活かし、安心できる撮影時間と未来に残る一枚をお届けしています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Plan -->
+    <section class="py-24 px-6 bg-glass">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-medium tracking-widest text-center mb-16 uppercase italic">Anniversary Plan</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- ライトプラン -->
+                <div class="bg-beige/50 p-10 rounded-[40px] shadow-sm border border-brown/5 text-center flex flex-col">
+                    <div class="img-zoom rounded-[30px] mb-8 h-48">
+                        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=800" alt="家族写真" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-medium mb-6">ライトプラン</h3>
+                    <div class="space-y-4 text-[13px] opacity-70 mb-8 flex-grow">
+                        <p class="font-bold underline underline-offset-8 decoration-pink/30">撮影30分 / データ30枚以上</p>
+                        <p>卒園・卒業・入園・入学・お宮参り<br>バースデー・家族写真・プロフィール<br>カジュアルな七五三など</p>
+                        <p class="text-[10px] mt-4 italic opacity-50">※神社での七五三・成人式不可</p>
+                    </div>
+                    <p class="text-2xl tracking-widest font-medium">22,000<span class="text-sm font-normal ml-1">円</span></p>
+                </div>
+                <!-- スタンダードプラン -->
+                <div class="bg-white p-10 rounded-[40px] shadow-md border-2 border-pink/10 text-center relative flex flex-col">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-pink text-white text-[10px] px-8 py-2 rounded-full shadow-md tracking-widest uppercase font-bold">Popular</span>
+                    <div class="img-zoom rounded-[30px] mb-8 h-48">
+                        <img src="https://i.ibb.co/KxkJMKbw/753-image.jpg" alt="七五三 家族写真" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1528659555027-4c4078347895?auto=format&fit=crop&q=80&w=800'">
+                    </div>
+                    <h3 class="text-xl font-medium mb-6">スタンダードプラン</h3>
+                    <div class="space-y-4 text-[13px] opacity-70 mb-8 flex-grow">
+                        <p class="font-bold underline underline-offset-8 decoration-pink/30">撮影60分 / データ70枚以上</p>
+                        <p>七五三・成人式・兄弟姉妹撮影・家族撮影<br>主役2名以上<br><span class="text-pink font-bold underline underline-offset-4 decoration-pink/50">成人式・神社での七五三はこちら</span></p>
+                        <p class="text-[10px] mt-4 italic opacity-50">※着物はアテンド料金別途</p>
+                    </div>
+                    <p class="text-2xl tracking-widest font-medium">33,000<span class="text-sm font-normal ml-1">円</span></p>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center bg-white/40 p-12 rounded-[40px] border border-white/60">
+                <h3 class="text-2xl md:text-3xl font-medium mb-4 italic">Newborn Photo</h3>
+                <p class="text-sm opacity-60 mb-8">新生児期のわずかな時間を、やさしく丁寧に残します。</p>
+                <a href="https://emuphotograph-max.github.io/noa.newbornphoto../" target="_blank" class="inline-block bg-btnBrown text-white px-10 py-4 rounded-full text-xs tracking-widest hover:bg-brown transition-all shadow-lg">
+                    ニューボーンフォトはこちら
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Option & Item -->
+    <section class="py-24 px-6 max-w-5xl mx-auto fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            <!-- Option -->
+            <div>
+                <h2 class="text-lg font-medium tracking-widest text-center mb-10 border-b border-brown/10 pb-4 italic">Option</h2>
+                <dl class="space-y-4 text-[13px]">
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>着物アテンド</dt><dd>5,500円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>土日祝日</dt><dd>5,500円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>キモノレンタル</dt><dd>11,000円〜</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>753着付け</dt><dd>5,500円〜7,700円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>訪問着着付け</dt><dd>7,700円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2 font-medium text-pink">
+                        <dt>訪問着レンタル着付け</dt><dd>22,000円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>振袖着付け</dt><dd>11,000円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>ヘアセット / メイク</dt><dd>4,400円〜</dd>
+                    </div>
+                </dl>
+                <div class="mt-8 text-[11px] opacity-60 bg-white/60 p-6 rounded-3xl leading-loose">
+                    出張費は、10㎞以内無料、15㎞以内3,300円、東広島、廿日市、大竹市など5,500円、厳島神社16,500円<br>駐車場代、施設代は実費請求。七五三着付けの方は簡易ヘアメイクサービス。
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div>
+                <h2 class="text-lg font-medium tracking-widest text-center mb-10 border-b border-brown/10 pb-4 italic">Item</h2>
+                <dl class="space-y-4 text-[13px]">
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>フォトパネル</dt><dd>11,000円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>見開きアルバム</dt><dd>22,000円</dd>
+                    </div>
+                    <div class="flex justify-between border-b border-brown/5 pb-2">
+                        <dt>10Pアルバム</dt><dd>38,500円</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Information -->
+    <section class="py-24 px-6 max-w-[800px] mx-auto fade-up">
+        <div class="text-center mb-16">
+            <h2 class="text-xl font-medium tracking-widest italic uppercase">Information</h2>
+            <div class="w-10 h-px bg-pink/40 mx-auto mt-6"></div>
+        </div>
+        
+        <div class="grid gap-4">
+            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
+                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
+                        <i data-lucide="camera" class="w-4 h-4 text-pink"></i> 撮影について
+                    </span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 opacity-40 transition-transform accordion-chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[13px] leading-loose opacity-70 border-t border-brown/5 pt-8 space-y-4">
+                        <p>カメラマンが、準備、撮影、編集、納品まで一人で行っております。アシスタントはおりませんので、パパ・ママにお子様の笑顔の引き出しにご協力をお願いしております。</p>
+                        <p>衣装はお客様ご自身でご準備いただくスタイルです。日程確定後、事前お振込みをお願いしております。</p>
+                        <p>施設での撮影の場合、入場料・駐車場・場所代等は実費負担をお願いしております。撮影許可はお客様ご自身で取得をお願いいたします。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
+                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
+                        <i data-lucide="image" class="w-4 h-4 text-pink"></i> 撮影データについて
+                    </span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 opacity-40 transition-transform accordion-chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[13px] leading-loose opacity-70 border-t border-brown/5 pt-8 space-y-4">
+                        <p>セレクトはカメラマンにお任せいただいております。納期は約1週間。オンラインアルバムでの納品となります。</p>
+                        <p>データの著作権は当社に帰属します。SNS等の掲載不可の場合は事前にお知らせください。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
+                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
+                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
+                        <i data-lucide="info" class="w-4 h-4 text-pink"></i> キャンセルポリシー
+                    </span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 opacity-40 transition-transform accordion-chevron"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-10 pb-10 text-[13px] leading-loose opacity-70 border-t border-brown/5 pt-8">
+                        <p>仮予約は無料。本予約後は1ヶ月前まで無料。1ヶ月前〜前日50%、当日100%頂戴します。※雨天・体調不良による延期は無料です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <a href="https://www.instagram.com/noa.photo33" target="_blank" class="inline-flex items-center gap-4 px-10 py-4 bg-white rounded-full shadow-sm hover:bg-pink hover:text-white transition-all border border-pink/10 group">
+                <i data-lucide="instagram" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
+                <span class="text-sm font-medium tracking-widest italic">Instagram @noa.photo33</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 9. Flow -->
+    <section class="py-24 px-6 max-w-lg mx-auto fade-up pb-48">
+        <h2 class="text-2xl font-medium tracking-widest text-center mb-16 italic">Flow</h2>
+        <div class="space-y-12 relative">
+            <div class="absolute left-5 top-0 bottom-0 w-[1px] bg-pink/20"></div>
+            
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-white border-2 border-pink/30 flex items-center justify-center text-xs font-bold text-pink z-10 shadow-sm flex-shrink-0 mt-1 italic">01</div>
+                <div>
+                    <p class="text-base font-medium mb-2">公式LINEで無料相談</p>
+                    <a href="https://lin.ee/E7yPvDr" target="_blank" class="text-xs text-pink underline underline-offset-8 font-bold">こちらから友だち追加</a>
+                </div>
+            </div>
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-xs font-bold z-10 shadow-md flex-shrink-0 mt-1 italic">02</div>
+                <p class="text-base font-medium pt-2">ご予約確定・事前お振込み</p>
+            </div>
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-xs font-bold z-10 shadow-md flex-shrink-0 mt-1 italic">03</div>
+                <p class="text-base font-medium pt-2">撮影当日</p>
+            </div>
+            <div class="flex items-start gap-10 relative">
+                <div class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-xs font-bold z-10 shadow-md flex-shrink-0 mt-1 italic">04</div>
+                <p class="text-base font-medium pt-2">データ納品（約1週間）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 px-6 text-center fade-up bg-pink/5 relative overflow-hidden">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-medium mb-10 leading-relaxed">何気ない今日が、<br>一生の宝物になります。</h2>
+            <p class="text-sm opacity-60 mb-12">未来のあなたへ、今の輝きを届けませんか。</p>
+            <a href="https://lin.ee/E7yPvDr" target="_blank" rel="noopener noreferrer" class="inline-flex flex-col items-center gap-4 group">
+                <div class="bg-pink text-white w-24 h-24 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                    <i data-lucide="message-circle" class="w-10 h-10"></i>
+                </div>
+                <span class="text-xs font-bold tracking-[0.4em] mt-2">公式LINEで予約・相談</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] tracking-[0.4em] opacity-40 uppercase">
+        <p>&copy; noa photo | hiroshima photographer akemi</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('is-visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const isOpen = btn.classList.contains('is-open');
+                const chevron = btn.querySelector('.accordion-chevron');
+                const icon = btn.querySelector('.accordion-icon');
+                
+                if (!isOpen) {
+                    btn.classList.add('is-open');
+                    content.classList.add('is-open');
+                    if(chevron) chevron.style.transform = 'rotate(180deg)';
+                    if(icon) {
+                        icon.style.transform = 'rotate(45deg)';
+                        icon.setAttribute('data-lucide', 'x');
+                    }
+                } else {
+                    btn.classList.remove('is-open');
+                    content.classList.remove('is-open');
+                    if(chevron) chevron.style.transform = 'rotate(0deg)';
+                    if(icon) {
+                        icon.style.transform = 'rotate(0deg)';
+                        icon.setAttribute('data-lucide', 'plus');
+                    }
+                }
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
+
