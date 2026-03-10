@@ -67,6 +67,10 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(210, 161, 161, 0.2);
         }
+
+        .insta-btn {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
     </style>
 </head>
 <body class="bg-beige text-brown font-sans leading-loose tracking-wide overflow-x-hidden">
@@ -129,7 +133,7 @@
             <h2 class="text-lg font-medium tracking-widest opacity-40 italic">Concept</h2>
         </div>
         <div class="space-y-8 text-sm md:text-base opacity-90 leading-loose">
-            <p>ご覧いただきありがとうございます。<br>広島市東区、広島第一病院近くの一軒家2階にある<br>小さなフォトスタジオ noa photo です。</p>
+            <p>ご覧いただきありがとうございます。<br>広島市東区、広島第一病院近くの一軒家2階にある<br>1日2組限定の小さなフォトスタジオ noa photo です。</p>
             <p>広島市を中心に、安芸郡府中町・海田町・呉市・東広島・廿日市などで<br>出張撮影も行っています。</p>
             
             <div class="py-12 relative">
@@ -159,7 +163,6 @@
         </div>
         
         <div class="space-y-8">
-            <!-- Reason 01-05 (略) -->
             <div class="bg-white/60 rounded-[32px] p-8 md:p-12 border border-brown/5 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10 items-start">
                 <div class="text-4xl md:text-5xl font-serif italic text-pink/30 leading-none">01</div>
                 <div>
@@ -176,11 +179,11 @@
                 <div>
                     <h3 class="text-[16px] md:text-[18px] font-bold tracking-wide mb-1 text-brown">ママカメラマンの視点</h3>
                     <p class="text-[11px] text-pink font-bold mb-4 tracking-wider italic">「ママだからこそ共感できる、今しかない愛おしい瞬間」</p>
-                    <p class="text-[14px] leading-loose opacity-70 text-justify">ママはいつも写真を撮る側で、ママとお子様の写真、なかなか撮れないですよね？
+                    <p class="text-[14px] leading-loose opacity-70 text-justify">
+                        ママは、いつも写真を撮る側ではないですか？
 ママとお子様の時間も大切に残します。
 安心して過ごせる
-やさしい撮影時間を大切にしています。
-                        私自身も子育て真っ最中です。「今この瞬間」がどれほど尊いかを知っているからこそ、ご家族の自然な表情や、日常にある小さな宝物を大切に切り取ります。
+やさしい撮影時間を大切にしています。私自身も子育て真っ最中です。「今この瞬間」がどれほど尊いかを知っているからこそ、ご家族の自然な表情や、日常にある小さな宝物を大切に切り取ります。
                     </p>
                 </div>
             </div>
@@ -191,8 +194,7 @@
                     <h3 class="text-[16px] md:text-[18px] font-bold tracking-wide mb-1 text-brown">余白を大切にした世界観</h3>
                     <p class="text-[11px] text-pink font-bold mb-4 tracking-wider italic">「数年後、ふと見返したくなる。光と空気感を纏う一枚」</p>
                     <p class="text-[14px] leading-loose opacity-70 text-justify">
-                        ただ、写真を撮るだけでなく、その日の光や空気感まで残す写真。数年後に見返したとき、
-その日の記憶がふわっとよみがえる1枚をお届けします。
+                        ただ記録するだけでなく、光と影、その場の空気感までを閉じ込める「余白」のある写真を。時間が経つほどに価値が増す、洗練されたアートのような1枚をお届けします。
                     </p>
                 </div>
             </div>
@@ -258,7 +260,16 @@
                 </div>
             </div>
 
-            <!-- Newborn Link (略) -->
+            <!-- Instagram Button -->
+            <div class="mt-12 text-center fade-up">
+                <p class="text-[11px] md:text-xs tracking-[0.3em] opacity-50 mb-6 uppercase">View our world on instagram</p>
+                <a href="https://www.instagram.com/noa.photo33/" target="_blank" rel="noopener noreferrer" class="cta-btn inline-flex items-center gap-3 bg-white border border-pink text-pink px-10 py-4 rounded-full text-sm font-bold tracking-widest hover:bg-pink hover:text-white transition-all shadow-sm">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    作品をもっと見る (Instagram)
+                </a>
+            </div>
+
+            <!-- Newborn Link -->
             <div class="mt-24 text-center bg-white p-12 md:p-16 rounded-[60px] border-2 border-pink/10 shadow-xl relative overflow-hidden">
                 <h3 class="text-4xl md:text-5xl font-medium mb-6 italic text-pink tracking-tight">Newborn Photo</h3>
                 <p class="text-xs md:text-sm opacity-70 mb-8 max-w-md mx-auto leading-relaxed">
@@ -400,7 +411,6 @@
         
         <div class="relative pl-10 md:pl-16 space-y-12">
             <div class="absolute left-[20px] md:left-[32px] top-2 bottom-2 w-px bg-pink/30"></div>
-            <!-- Step 1-5 (略) -->
             <div class="relative">
                 <div class="absolute -left-10 md:-left-16 top-0 w-10 md:w-16 flex justify-center">
                     <div class="w-8 h-8 rounded-full bg-beige border-2 border-pink/40 text-pink flex items-center justify-center font-bold text-sm italic z-10">1</div>
@@ -443,7 +453,7 @@
                 </div>
                 <h3 class="text-[16px] font-medium tracking-wide mb-3 text-brown mt-1">データ納品</h3>
                 <p class="text-[14px] opacity-70 leading-relaxed bg-white/60 p-6 md:p-8 rounded-[24px] border border-brown/5 shadow-sm">
-                    カメラマンセレクト、丁寧に編集後、オンラインアルバムにて1週間程度で、データ納品いたします。
+                    カメラマンセレクトデータ、丁寧に編集後、オンラインアルバムにてデータ納品いたします。
                 </p>
             </div>
         </div>
