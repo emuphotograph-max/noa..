@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -46,15 +47,6 @@
             transform: translateY(0);
         }
 
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .accordion-content.is-open {
-            max-height: 1000px;
-        }
-        
         .soft-shadow { box-shadow: 0 15px 40px rgba(107, 90, 82, 0.08); }
         .bg-glass { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); }
         
@@ -67,8 +59,6 @@
             height: 80px;
             background: linear-gradient(to bottom, transparent, #D2A1A1, transparent);
         }
-
-        .rotate-icon { transform: rotate(45deg); }
     </style>
 </head>
 <body class="bg-beige text-brown font-sans leading-loose tracking-wide overflow-x-hidden">
@@ -144,83 +134,60 @@
     </section>
 
     <!-- 4. Selected Reason -->
-    <section class="py-24 px-6 max-w-[750px] mx-auto fade-up">
-        <h2 class="text-xl font-medium tracking-widest text-center mb-16 italic">noa photo が選ばれる理由</h2>
+    <section class="py-24 px-6 max-w-[800px] mx-auto fade-up">
+        <div class="text-center mb-16">
+            <h2 class="text-xl font-medium tracking-widest italic uppercase">Reasons</h2>
+            <p class="text-[10px] opacity-40 tracking-widest mt-2">noa photo が選ばれる理由</p>
+        </div>
         
-        <div class="grid gap-4">
-            <!-- Reason 01 -->
-            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
-                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
-                    <div class="flex items-center gap-5">
-                        <span class="text-2xl font-bold text-pink/30">01</span>
-                        <span class="text-[15px] font-medium tracking-wide">医療現場10年の経験</span>
-                    </div>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+        <div class="space-y-8">
+            <div class="bg-white/60 rounded-[32px] p-8 md:p-12 border border-brown/5 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+                <div class="text-4xl md:text-5xl font-serif italic text-pink/30 leading-none">01</div>
+                <div>
+                    <h3 class="text-[16px] md:text-[18px] font-medium tracking-wide mb-4 text-brown">医療現場10年の経験</h3>
+                    <p class="text-[14px] leading-loose opacity-70 text-justify">
                         産婦人科・皮膚科・整形外科など医療の現場で約10年勤務してきました。赤ちゃんや小さなお子さま、ママの体調やペースを大切にしながら安心して撮影していただける環境を心がけています。
-                    </div>
+                    </p>
                 </div>
             </div>
-            <!-- Reason 02 -->
-            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
-                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
-                    <div class="flex items-center gap-5">
-                        <span class="text-2xl font-bold text-pink/30">02</span>
-                        <span class="text-[15px] font-medium tracking-wide">心と身体に寄り添うケア経験</span>
-                    </div>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+            
+            <div class="bg-white/60 rounded-[32px] p-8 md:p-12 border border-brown/5 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+                <div class="text-4xl md:text-5xl font-serif italic text-pink/30 leading-none">02</div>
+                <div>
+                    <h3 class="text-[16px] md:text-[18px] font-medium tracking-wide mb-4 text-brown">心と身体に寄り添うケア経験</h3>
+                    <p class="text-[14px] leading-loose opacity-70 text-justify">
                         アロマ・エステ・カウンセリングなど約10年間、心と身体のケアに携わってきました。その経験を活かし、お客様がリラックスできる空気づくりを大切にしています。
-                    </div>
+                    </p>
                 </div>
             </div>
-            <!-- Reason 03 -->
-            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
-                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
-                    <div class="flex items-center gap-5">
-                        <span class="text-2xl font-bold text-pink/30">03</span>
-                        <span class="text-[15px] font-medium tracking-wide">800件以上の撮影実績</span>
-                    </div>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+
+            <div class="bg-white/60 rounded-[32px] p-8 md:p-12 border border-brown/5 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+                <div class="text-4xl md:text-5xl font-serif italic text-pink/30 leading-none">03</div>
+                <div>
+                    <h3 class="text-[16px] md:text-[18px] font-medium tracking-wide mb-4 text-brown">800件以上の撮影実績</h3>
+                    <p class="text-[14px] leading-loose opacity-70 text-justify">
                         これまで 800件以上の撮影実績 があります。ニューボーン、七五三、家族写真など大切な節目を安心してお任せいただけます。
-                    </div>
+                    </p>
                 </div>
             </div>
-            <!-- Reason 04 -->
-            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
-                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
-                    <div class="flex items-center gap-5">
-                        <span class="text-2xl font-bold text-pink/30">04</span>
-                        <span class="text-[15px] font-medium tracking-wide">ママだからこそ分かる大切な瞬間</span>
-                    </div>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-10 pb-10 text-[14px] leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+
+            <div class="bg-white/60 rounded-[32px] p-8 md:p-12 border border-brown/5 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+                <div class="text-4xl md:text-5xl font-serif italic text-pink/30 leading-none">04</div>
+                <div>
+                    <h3 class="text-[16px] md:text-[18px] font-medium tracking-wide mb-4 text-brown">ママだからこそ分かる大切な瞬間</h3>
+                    <p class="text-[14px] leading-loose opacity-70 text-justify">
                         自身も子育てをしながら「今しかないこの瞬間の大切さ」を実感しています。その一瞬一瞬を未来に残る宝物として写真に残します。
-                    </div>
+                    </p>
                 </div>
             </div>
-            <!-- Reason 05 -->
-            <div class="bg-white/50 rounded-[32px] overflow-hidden border border-brown/5 shadow-sm">
-                <button class="accordion-btn w-full px-8 py-7 flex justify-between items-center text-left focus:outline-none">
-                    <div class="flex items-center gap-5">
-                        <span class="text-2xl font-bold text-pink/30">05</span>
-                        <span class="text-[15px] font-medium tracking-wide">写真だけでなく“思い出の時間”を</span>
-                    </div>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-10 pb-10 text-[14px] font-medium leading-loose opacity-70 border-t border-brown/5 pt-8 text-justify">
+
+            <div class="bg-white/60 rounded-[32px] p-8 md:p-12 border border-brown/5 shadow-sm flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+                <div class="text-4xl md:text-5xl font-serif italic text-pink/30 leading-none">05</div>
+                <div>
+                    <h3 class="text-[16px] md:text-[18px] font-medium tracking-wide mb-4 text-brown">写真だけでなく“思い出の時間”を</h3>
+                    <p class="text-[14px] leading-loose opacity-70 text-justify">
                         撮影の時間そのものも大切な思い出になるように。おしゃべりをしながら楽しくリラックスした空間で自然な表情を撮影します。
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>
@@ -283,12 +250,31 @@
                 </div>
             </div>
 
-            <div class="mt-20 text-center bg-white/40 p-12 rounded-[40px] border border-white/60">
-                <h3 class="text-lg font-medium mb-4 italic">Newborn Photo</h3>
-                <p class="text-sm opacity-60 mb-8">新生児期のわずかな時間を、やさしく丁寧に残します。</p>
-                <a href="https://emuphotograph-max.github.io/noa.newbornphoto../" target="_blank" class="inline-block bg-btnBrown text-white px-10 py-4 rounded-full text-xs tracking-widest hover:bg-brown transition-all shadow-lg">
-                    ニューボーンフォトはこちら
-                </a>
+            <!-- Newborn Section (Smaller Button Design) -->
+            <div class="mt-24 text-center bg-white p-12 md:p-16 rounded-[60px] border-2 border-pink/10 shadow-xl relative overflow-hidden">
+                <h3 class="text-4xl md:text-5xl font-medium mb-6 italic text-pink tracking-tight">Newborn Photo</h3>
+                <p class="text-xs md:text-sm opacity-70 mb-8 max-w-md mx-auto leading-relaxed">
+                    生まれて間もない、ほんのわずかな期間だけの特別な姿。<br>
+                    眠る姿、小さな手足、やわらかな質感をやさしく丁寧に残します。
+                </p>
+                
+                <div class="flex flex-col items-center">
+                    <!-- Adjusted Smaller Button -->
+                    <a href="https://emuphotograph-max.github.io/noa.newbornphoto../" target="_blank" class="group relative inline-flex items-center justify-between bg-pink text-white min-w-[240px] md:min-w-[260px] py-4 px-8 rounded-full text-sm md:text-base font-bold tracking-[0.2em] shadow-lg hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-300">
+                        <!-- Milk Icon Left (Smaller) -->
+                        <div class="w-6 h-6 flex items-center justify-center opacity-90">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 11l.5-4a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2l.5 4"/><path d="M8.5 11a4 4 0 0 0 0 8h7a4 4 0 0 0 0-8h-7z"/><path d="M11 11h2"/><path d="M12 15h.01"/></svg>
+                        </div>
+                        
+                        <span class="flex-grow text-center">こちらをクリック</span>
+                        
+                        <!-- Baby Icon Right (Smaller) -->
+                        <div class="w-6 h-6 flex items-center justify-center opacity-90">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z"/><path d="M12 10c-3.3 0-6 2.7-6 6 0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2 0-3.3-2.7-6-6-6Z"/><path d="M10 14h4"/></svg>
+                        </div>
+                    </a>
+                    <p class="mt-4 text-[9px] opacity-40 uppercase tracking-[0.3em] font-medium">Newborn Gallery</p>
+                </div>
             </div>
         </div>
     </section>
@@ -325,7 +311,7 @@
                         <dt>ヘアセット / メイク</dt><dd>4,400円〜</dd>
                     </div>
                 </dl>
-                <div class="mt-8 text-[11px] opacity-60 bg-white/60 p-6 rounded-3xl leading-loose space-y-2">
+                <div class="mt-8 text-[12px] opacity-70 bg-white/60 p-6 md:p-8 rounded-[24px] leading-loose space-y-3 border border-brown/5">
                     <p>出張費は、10㎞以内2,200円、15㎞以内3,300円、東広島、廿日市、大竹市など5,500円、厳島神社16,500円</p>
                     <p>駐車場代、施設代は実費請求。着物撮影は、所作や着崩れお直しサポートとして、アテンド料金がかかります。<br>七五三着付けの方は簡易ヘアメイクサービス。</p>
                 </div>
@@ -350,170 +336,122 @@
     </section>
 
     <!-- 8. Information -->
-    <section class="py-24 px-6 max-[800px] mx-auto fade-up">
+    <section class="py-24 px-6 max-w-[800px] mx-auto fade-up">
         <div class="text-center mb-16">
             <h2 class="text-xl font-medium tracking-widest italic uppercase">Information</h2>
             <div class="w-10 h-px bg-pink/40 mx-auto mt-6"></div>
         </div>
         
-        <div class="grid gap-4">
-            <!-- Place -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
-                        <i data-lucide="info" class="w-4 h-4 text-pink"></i> 撮影場所について
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-8 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6">
-                        スタジオは広島市東区（広島第一病院付近）にございます。詳しい住所はご予約確定後にお伝えいたします。
-                        出張撮影は、ご自宅や神社、公園などご希望の場所へ伺います。
-                    </div>
+        <div class="space-y-8">
+            <div class="bg-white/50 rounded-[32px] border border-brown/5 p-8 md:p-10 shadow-sm">
+                <h3 class="text-[16px] font-medium tracking-wide flex items-center gap-3 mb-4">
+                    <i data-lucide="info" class="w-5 h-5 text-pink"></i> 撮影場所について
+                </h3>
+                <div class="text-[14px] opacity-70 leading-relaxed pl-8">
+                    <p>スタジオは広島市東区（広島第一病院付近）にございます。<br>詳しい住所はご予約確定後にお伝えいたします。</p>
+                    <p class="mt-2">出張撮影は、ご自宅や神社、公園などご希望の場所へ伺います。</p>
                 </div>
             </div>
 
-            <!-- Urgent Message -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
-                        <i data-lucide="heart-handshake" class="w-4 h-4 text-pink"></i> お客様へお願い
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-8 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6 space-y-4">
-                        <p>
-                            私自身や、家族の体調不良、突然の事情で、撮影の延期や、中止など、ご迷惑をおかけすることがあるかもしれません。
-                        </p>
-                        <p>
-                            代わりのスタッフがいる場合は、速やかに対応させて頂きます。<br>ご理解のほど、よろしくお願いいたします。
-                        </p>
-                        <p class="pt-2 border-t border-brown/5">
-                            台風／暴風／大雪などの警報がでている場合、また、大地震／災害などの場合は、日程を変更させていただくことがあります。
-                        </p>
-                    </div>
+            <div class="bg-white/50 rounded-[32px] border border-brown/5 p-8 md:p-10 shadow-sm">
+                <h3 class="text-[16px] font-medium tracking-wide flex items-center gap-3 mb-4">
+                    <i data-lucide="heart-handshake" class="w-5 h-5 text-pink"></i> 安心への取り組み
+                </h3>
+                <div class="text-[14px] opacity-70 leading-relaxed pl-8 space-y-4 text-justify">
+                    <p>
+                        皆様の大切な瞬間を最高のコンディションで形にするため、日々の体調管理と準備を徹底しております。<br>
+                        万が一、スタッフの不測の事態により撮影が困難な場合は、速やかに代替スタッフを手配し、スムーズな進行に尽力いたします。
+                    </p>
+                    <p class="pt-4 border-t border-brown/5">
+                        なお、台風・大雪などの警報や災害時は、お客様の安全を最優先し、日程の振り替えをご提案させていただきます。「最高の一枚」を安全にお届けするための判断となりますので、ご理解頂けますと幸いです。
+                    </p>
                 </div>
             </div>
 
-            <!-- Cancel Policy -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-3">
-                        <i data-lucide="alert-circle" class="w-4 h-4 text-pink"></i> キャンセルポリシー
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-8 pb-8 text-[13px] opacity-70 leading-loose border-t border-brown/5 pt-6">
-                        <ul class="space-y-4">
-                            <li>
-                                <span class="font-bold text-brown">● キャンセル料金について</span><br>
-                                ・仮予約：<span class="text-pink font-bold">無料</span><br>
-                                ・1か月前～前日まで：料金の50％<br>
-                                ・当日、無断キャンセル：料金の100％
-                            </li>
-                            <li>
-                                <span class="font-bold text-brown">● 延期について</span><br>
-                                雨天や体調不良による延期は、<span class="text-pink font-bold">無料</span>で承ります。無理をなさらずご相談ください。
-                            </li>
-                            <li class="text-[11px] mt-4 opacity-60">
-                                ※こちらの都合による延期・キャンセルは上記対象外となります。
-                            </li>
-                        </ul>
-                    </div>
+            <div class="bg-white/50 rounded-[32px] border border-brown/5 p-8 md:p-10 shadow-sm">
+                <h3 class="text-[16px] font-medium tracking-wide flex items-center gap-3 mb-4">
+                    <i data-lucide="alert-circle" class="w-5 h-5 text-pink"></i> キャンセルポリシー
+                </h3>
+                <div class="text-[14px] opacity-70 leading-loose pl-8">
+                    <ul class="space-y-6">
+                        <li>
+                            <span class="font-bold text-brown">● キャンセル料金について</span><br>
+                            ・仮予約：<span class="text-pink font-bold">無料</span><br>
+                            ・1か月前～前日まで：料金の50％<br>
+                            ・当日、無断キャンセル：料金の100％
+                        </li>
+                        <li class="pt-4 border-t border-brown/5">
+                            <span class="font-bold text-brown">● 延期について</span><br>
+                            雨天や体調不良による延期は、<span class="text-pink font-bold">無料</span>で承ります。無理をなさらずご相談ください。
+                        </li>
+                        <li class="text-[12px] opacity-60 leading-normal">
+                            ※こちらの都合による延期・キャンセルは上記対象外となります。
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 9. Shooting Flow -->
-    <section class="py-24 px-6 max-[800px] mx-auto fade-up">
+    <section class="py-24 px-6 max-w-[800px] mx-auto fade-up">
         <div class="text-center mb-16">
             <h2 class="text-xl font-medium tracking-widest italic uppercase">Flow</h2>
             <p class="text-[10px] opacity-40 tracking-widest mt-2 uppercase">ご予約から、撮影まで</p>
             <div class="w-10 h-px bg-pink/40 mx-auto mt-6"></div>
         </div>
         
-        <div class="grid gap-4">
-            <!-- Flow 01 -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-4">
-                        <span class="w-6 h-6 rounded-full bg-pink/10 text-pink flex items-center justify-center font-bold text-[10px] italic">1</span>
-                        LINEで無料相談
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-12 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6 ml-4">
-                        撮影内容・ご希望の日程・撮影場所など、LINEでお気軽にご相談ください。初めての方も丁寧にご案内いたします。
-                    </div>
+        <div class="relative pl-10 md:pl-16 space-y-12">
+            <div class="absolute left-[20px] md:left-[32px] top-2 bottom-2 w-px bg-pink/30"></div>
+
+            <div class="relative">
+                <div class="absolute -left-10 md:-left-16 top-0 w-10 md:w-16 flex justify-center">
+                    <div class="w-8 h-8 rounded-full bg-beige border-2 border-pink/40 text-pink flex items-center justify-center font-bold text-sm italic z-10">1</div>
                 </div>
+                <h3 class="text-[16px] font-medium tracking-wide mb-3 text-brown mt-1">LINEで無料相談</h3>
+                <p class="text-[14px] opacity-70 leading-relaxed bg-white/60 p-6 md:p-8 rounded-[24px] border border-brown/5 shadow-sm">
+                    撮影内容・ご希望の日程・撮影場所など、LINEでお気軽にご相談ください。初めての方も丁寧にご案内いたします。
+                </p>
             </div>
 
-            <!-- Flow 02 -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-4">
-                        <span class="w-6 h-6 rounded-full bg-pink/10 text-pink flex items-center justify-center font-bold text-[10px] italic">2</span>
-                        日程確定・ご予約
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-12 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6 ml-4">
-                        空き状況を確認し、撮影日時を確定します。
-                    </div>
+            <div class="relative">
+                <div class="absolute -left-10 md:-left-16 top-0 w-10 md:w-16 flex justify-center">
+                    <div class="w-8 h-8 rounded-full bg-beige border-2 border-pink/40 text-pink flex items-center justify-center font-bold text-sm italic z-10">2</div>
                 </div>
+                <h3 class="text-[16px] font-medium tracking-wide mb-3 text-brown mt-1">日程確定・ご予約</h3>
+                <p class="text-[14px] opacity-70 leading-relaxed bg-white/60 p-6 md:p-8 rounded-[24px] border border-brown/5 shadow-sm">
+                    空き状況を確認し、撮影日時を確定します。
+                </p>
             </div>
 
-            <!-- Flow 03 -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-4">
-                        <span class="w-6 h-6 rounded-full bg-pink/10 text-pink flex items-center justify-center font-bold text-[10px] italic">3</span>
-                        事前お振込み
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-12 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6 ml-4">
-                        撮影料金のお振込みをお願いしております。ご入金確認後、ご予約確定となります。
-                    </div>
+            <div class="relative">
+                <div class="absolute -left-10 md:-left-16 top-0 w-10 md:w-16 flex justify-center">
+                    <div class="w-8 h-8 rounded-full bg-beige border-2 border-pink/40 text-pink flex items-center justify-center font-bold text-sm italic z-10">3</div>
                 </div>
+                <h3 class="text-[16px] font-medium tracking-wide mb-3 text-brown mt-1">事前お振込み</h3>
+                <p class="text-[14px] opacity-70 leading-relaxed bg-white/60 p-6 md:p-8 rounded-[24px] border border-brown/5 shadow-sm">
+                    撮影料金のお振込みをお願いしております。ご入金確認後、ご予約確定となります。
+                </p>
             </div>
 
-            <!-- Flow 04 -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-4">
-                        <span class="w-6 h-6 rounded-full bg-pink/10 text-pink flex items-center justify-center font-bold text-[10px] italic">4</span>
-                        撮影当日
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-12 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6 ml-4">
-                        リラックスした雰囲気で、自然な表情を撮影します。お子さまのペースに合わせて進めますのでご安心ください。
-                    </div>
+            <div class="relative">
+                <div class="absolute -left-10 md:-left-16 top-0 w-10 md:w-16 flex justify-center">
+                    <div class="w-8 h-8 rounded-full bg-beige border-2 border-pink/40 text-pink flex items-center justify-center font-bold text-sm italic z-10">4</div>
                 </div>
+                <h3 class="text-[16px] font-medium tracking-wide mb-3 text-brown mt-1">撮影当日</h3>
+                <p class="text-[14px] opacity-70 leading-relaxed bg-white/60 p-6 md:p-8 rounded-[24px] border border-brown/5 shadow-sm">
+                    リラックスした雰囲気で、自然な表情を撮影します。お子さまのペースに合わせて進めますのでご安心ください。
+                </p>
             </div>
 
-            <!-- Flow 05 -->
-            <div class="bg-white/50 rounded-[24px] border border-brown/5 overflow-hidden">
-                <button class="accordion-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none">
-                    <span class="text-[14px] font-medium tracking-wide flex items-center gap-4">
-                        <span class="w-6 h-6 rounded-full bg-pink/10 text-pink flex items-center justify-center font-bold text-[10px] italic">5</span>
-                        データ納品
-                    </span>
-                    <i data-lucide="plus" class="w-4 h-4 opacity-40 transition-transform duration-300 accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-12 pb-8 text-[13px] opacity-70 leading-relaxed border-t border-brown/5 pt-6 ml-4">
-                        カメラマンセレクト・丁寧に編集後、オンラインアルバムにてデータ納品いたします。
-                    </div>
+            <div class="relative">
+                <div class="absolute -left-10 md:-left-16 top-0 w-10 md:w-16 flex justify-center">
+                    <div class="w-8 h-8 rounded-full bg-beige border-2 border-pink/40 text-pink flex items-center justify-center font-bold text-sm italic z-10">5</div>
                 </div>
+                <h3 class="text-[16px] font-medium tracking-wide mb-3 text-brown mt-1">データ納品</h3>
+                <p class="text-[14px] opacity-70 leading-relaxed bg-white/60 p-6 md:p-8 rounded-[24px] border border-brown/5 shadow-sm">
+                    カメラマンセレクト・丁寧に編集後、オンラインアルバムにてデータ納品いたします。
+                </p>
             </div>
         </div>
     </section>
@@ -538,18 +476,6 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-        // Accordion functionality
-        document.querySelectorAll('.accordion-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('.accordion-icon');
-                
-                // Toggle active state
-                content.classList.toggle('is-open');
-                icon.classList.toggle('rotate-icon');
-            });
-        });
     </script>
 </body>
 </html>
