@@ -38,6 +38,9 @@
   </script>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       background-color: #f7f5f2;
       color: #4a4440;
@@ -187,12 +190,32 @@
       object-fit: cover;
       object-position: center 20%;
     }
+
+    /* Navigation Styles */
+    .nav-link {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: #8b7c71;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #4a4440;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(189, 174, 163, 0.1);
+    }
   </style>
 </head>
 
 <body class="antialiased selection:bg-brand selection:text-white pb-48">
 
-  <!-- 追従ボタン (小さめ) -->
+  <!-- 追従ボタン -->
   <div class="floating-container">
     <a href="tel:09095029504" class="float-btn-tel">
       <div class="label"><i data-lucide="phone" class="w-3 h-3"></i>電話で問い合わせる</div>
@@ -206,13 +229,21 @@
 
   <main class="max-w-2xl mx-auto content-wrapper min-h-screen relative pb-24">
 
-    <!-- ヘッダー -->
-    <header class="py-6 text-center border-b border-brand-light/20">
-      <h1 class="text-xl tracking-widest font-serif text-brand-dark">noa photo</h1>
+    <!-- ヘッダー（ナビゲーション追加） -->
+    <header class="sticky-header py-4 text-center">
+      <a href="#top"><h1 class="text-xl tracking-widest font-serif text-brand-dark mb-3">noa photo</h1></a>
+      <nav class="flex justify-center gap-4 sm:gap-6 border-t border-brand-light pt-3">
+        <a href="#about" class="nav-link uppercase">About</a>
+        <a href="#plans" class="nav-link uppercase">Plans</a>
+        <a href="#flow" class="nav-link uppercase">Flow</a>
+        <a href="#qa" class="nav-link uppercase">Q&A</a>
+        <a href="#gallery" class="nav-link uppercase">Gallery</a>
+        <a href="#reserve" class="nav-link uppercase">Contact</a>
+      </nav>
     </header>
 
     <!-- ① ファーストビュー -->
-    <section class="px-4 pb-12 text-center border-b border-brand-light">
+    <section id="top" class="px-4 pb-12 text-center border-b border-brand-light">
       <div class="relative w-full aspect-[4/3] mb-8 mt-6 overflow-hidden rounded-2xl shadow-sm">
         <img src="https://i.ibb.co/DHBFHBV1/IMG-7868.jpg" alt="メインビジュアル" class="top-image">
       </div>
@@ -220,7 +251,7 @@
         何気ない今日が、<br>一生の宝物になる.
       </h2>
       <p class="text-sm tracking-widest text-brand-dark mb-8">
-         おうちフォトスタジオ＆出張撮影
+        出張撮影 ＆ おうちフォトスタジオ
       </p>
       
       <a href="https://lin.ee/V8DsU8l" target="_blank" class="line-btn px-8 py-4 text-base">
@@ -230,11 +261,11 @@
     </section>
 
     <!-- ② 紹介文 -->
-    <section class="px-6 py-16 bg-brand-light/30 text-center border-b border-brand-light">
+    <section id="about" class="px-6 py-16 bg-brand-light/30 text-center border-b border-brand-light">
       <i data-lucide="camera" class="w-8 h-8 mx-auto mb-6 text-brand"></i>
       <div class="space-y-4 text-brand-text/80 leading-relaxed text-sm">
         <p>ご覧いただきありがとうございます。<br>
-        広島市東区、広島第一病院近くにある<br>
+        広島市東区の一軒家2階にある<br>
         おうちフォトスタジオ noa photo です。<br>
         広島市を中心に、出張撮影も行っています。</p>
         
@@ -249,11 +280,11 @@
       </div>
     </section>
 
-    <!-- おすすめポイント (追加セクション) -->
-    <section class="px-6 py-16">
+    <!-- おすすめポイント -->
+    <section id="features" class="px-6 py-16">
       <div class="text-center mb-10">
         <p class="font-serif text-xs tracking-[0.2em] text-brand uppercase mb-2">FEATURES</p>
-        <h3 class="font-serif text-2xl tracking-widest text-brand-text">おすすめポイント</h3>
+        <h3 class="font-serif text-2xl tracking-widest text-brand-text">noa photo 的おすすめポイント</h3>
         <div class="w-10 h-[2px] bg-brand mx-auto mt-4 opacity-50"></div>
       </div>
 
@@ -262,7 +293,7 @@
           <div class="shrink-0 w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center font-serif text-brand font-bold">1</div>
           <div>
             <h4 class="font-bold text-brand-dark mb-2">ニューボーンフォトから大人まで安心の撮影</h4>
-            <p class="text-sm text-brand-text/80 leading-relaxed">元産婦人科看護師・セラピストのカメラマンが、赤ちゃんから大人まで、寄り添った撮影。楽しくおしゃべりしながら、自然な表情を引き出します。</p>
+            <p class="text-sm text-brand-text/80 leading-relaxed">元産婦人科看護師・セラピストのカメラマンが、赤ちゃんから大人まで幅広く撮影。自然な表情を引き出します。</p>
           </div>
         </div>
 
@@ -270,22 +301,22 @@
           <div class="shrink-0 w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center font-serif text-brand font-bold">2</div>
           <div>
             <h4 class="font-bold text-brand-dark mb-2">自宅での着付け・着崩れ直しも対応</h4>
-            <p class="text-sm text-brand-text/80 leading-relaxed">着付けは自宅でもOK。外出準備の負担も最小限に。抱っこや動きで崩れてもすぐお直しで可能。着付けができるカメラマンだから安心です。</p>
+            <p class="text-sm text-brand-text/80 leading-relaxed">衣装や着付けは自宅でもOK。抱っこや動きで崩れてもすぐお直しできるので、自然体の瞬間を逃しません。</p>
           </div>
         </div>
 
         <div class="bg-brand-light/20 rounded-2xl p-6 border border-brand-light flex gap-4">
           <div class="shrink-0 w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center font-serif text-brand font-bold">3</div>
           <div>
-            <h4 class="font-bold text-brand-dark mb-2">写真はデータだけでなく形にして残せます</h4>
-            <p class="text-sm text-brand-text/80 leading-relaxed">アルバムやフォトパネルなど、ご希望に合わせて提案。無理な勧誘はなし、安心して相談できます。</p>
+            <h4 class="font-bold text-brand-dark mb-2">写真はデータだけでなく形にして残せる</h4>
+            <p class="text-sm text-brand-text/80 leading-relaxed">アルバムやプリントなど、ご希望に合わせて提案。無理な勧誘はなし、安心して相談できます。</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ③ プラン -->
-    <section class="px-6 py-16 bg-brand-light/20">
+    <section id="plans" class="px-6 py-16 bg-brand-light/20">
       <h3 class="text-center font-serif text-2xl tracking-widest mb-12 text-brand-text">Plans</h3>
       
       <!-- ベビーフォト -->
@@ -299,6 +330,7 @@
           <img src="https://i.ibb.co/84QjR0pr/IMG-6971.jpg" alt="ベビーフォト" class="w-full h-full object-cover">
         </div>
         <div class="space-y-4">
+          
           <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-light relative overflow-hidden">
             <div class="absolute top-0 right-0 bg-brand text-white text-[10px] px-3 py-1 rounded-bl-lg font-bold">平日おうちスタジオ限定</div>
             <button onclick="togglePlan('b-plan1', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
@@ -322,6 +354,7 @@
               </div>
             </div>
           </div>
+          
           <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-light relative overflow-hidden">
             <div class="absolute top-0 right-0 bg-brand text-white text-[10px] px-3 py-1 rounded-bl-lg font-bold">生後14日以内の撮影がおすすめ</div>
             <button onclick="togglePlan('b-plan2', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
@@ -335,16 +368,16 @@
             </button>
             <div id="b-plan2" class="plan-content">
               <div class="pt-4 mt-4 border-t border-gray-100 text-sm text-brand-text/80 leading-relaxed">
-                生まれたばかりの今だけの姿、小さな手、眠る表情、かけがえのない思い出を写真に。<br>
-                おくるみ2パターン ＋ 家族写真 ＋ パーツフォトが含まれる充実のプランです..<br>生後14日以内がおすすめですが、1か月までOK<br>
-                
+                生まれてきてくれた感謝を込めて.<br>
+                おくるみ2パターン ＋ 家族写真 ＋ パーツフォトが含まれる充実のプランです.
               </div>
             </div>
           </div>
+          
           <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-light">
             <button onclick="togglePlan('b-plan3', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
               <div>
-                <p class="font-bold text-lg mb-1 group-hover:text-brand-dark transition-colors">お宮参り（100日）プラン</p>
+                <p class="font-bold text-lg mb-1 group-hover:text-brand-dark transition-colors">お宮参りプラン</p>
                 <p class="text-brand-dark text-sm tracking-wide">30枚〜70枚データ｜27,500円〜38,500円</p>
               </div>
               <div class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-dark">
@@ -353,8 +386,55 @@
             </button>
             <div id="b-plan3" class="plan-content">
               <div class="pt-4 mt-4 border-t border-gray-100 text-sm text-brand-text/80 leading-relaxed">
-                赤ちゃんの健やかな成長を祈るお宮参り（100日）撮影。ご家族の一生の宝物になる撮影をさせていただきます。<br>
+                ご家族の大切な行事を美しく記録します.<br>
                 <span class="inline-block bg-brand/10 text-brand-dark px-2 py-1 rounded text-xs mt-2">産着無料貸し出しあり（赤・黒）</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- はじまりの1年プラン -->
+          <div class="bg-white rounded-2xl p-5 shadow-sm border-2 border-brand/40 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-brand text-white text-[10px] px-3 py-1 rounded-bl-lg font-bold">アルバムプレゼント</div>
+            <button onclick="togglePlan('b-plan4', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
+              <div>
+                <p class="font-bold text-lg mb-1 group-hover:text-brand-dark transition-colors">はじまりの1年プラン</p>
+                <p class="text-brand-dark text-sm tracking-wide">全4回 / 毎回50枚データ納品 ｜ 110,000円</p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-dark">
+                <i data-lucide="chevron-down" class="w-5 h-5 icon-rotate"></i>
+              </div>
+            </button>
+            <div id="b-plan4" class="plan-content">
+              <div class="pt-4 mt-4 border-t border-gray-100 text-sm text-brand-text/80 leading-relaxed">
+                赤ちゃんとご家族の「はじまりの1年」を、同じカメラマンが丁寧に寄り添いながら記録する特別なプラン。<br>
+                1回ごとの撮影では残せない成長のストーリーをカタチに残します。<br><br>
+                
+                <p class="font-bold text-brand-dark mb-1">【 内容：全4回撮影 / 毎回50枚データ納品 】</p>
+                <p class="text-xs mb-3 opacity-80">固定の2つ ＋ 下記よりお好きな2つを選択いただけます。</p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                  <div class="bg-gray-50 p-3 rounded-lg">
+                    <p class="text-[10px] font-bold text-brand uppercase mb-1">Fixed</p>
+                    <ul class="space-y-1 text-xs">
+                      <li>・ニューボーンフォト</li>
+                      <li>・お宮参り</li>
+                    </ul>
+                  </div>
+                  <div class="bg-gray-50 p-3 rounded-lg">
+                    <p class="text-[10px] font-bold text-brand uppercase mb-1">Select 2</p>
+                    <ul class="space-y-1 text-xs">
+                      <li>・マタニティフォト</li>
+                      <li>・ハーフバースデー</li>
+                      <li>・バースデー</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="bg-brand-light/40 p-4 rounded-xl mb-2">
+                  <p class="font-bold text-brand-dark mb-1">▼ 特典</p>
+                  <p>ニューボーンフォトの見開きアルバム<br>（22,000円相当）プレゼント🎁</p>
+                </div>
+                <span class="text-xs text-brand-dark italic block mt-2">※土日祝日料金別途</span>
               </div>
             </div>
           </div>
@@ -502,14 +582,14 @@
             <div id="anniv-plan1" class="plan-content">
               <div class="pt-4 mt-4 border-t border-gray-100 text-sm text-brand-text/80 leading-relaxed">
                 大切な記念日を, しっかりとカタチに.<br>
-                家族写真・入学・卒業・バースデー・マタニティフォトなどに、おすすめ.
+                家族写真, 入学・卒業・バースデー・マタニティフォトなどに, おすすめ.
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- プロフィールフォト (最後に配置) -->
+      <!-- プロフィールフォト -->
       <div class="mb-16">
         <div class="flex items-center gap-4 mb-6">
           <div class="h-[1px] flex-1 bg-brand/30"></div>
@@ -563,7 +643,7 @@
       </div>
 
       <!-- Options -->
-      <div class="mt-20 pt-12 border-t border-brand/20">
+      <div id="options" class="mt-20 pt-12 border-t border-brand/20">
         <h4 class="text-center font-serif text-xl tracking-widest mb-8 text-brand-text">Options</h4>
         
         <div class="bg-white/50 rounded-3xl p-6 sm:p-8 border border-brand-light">
@@ -580,7 +660,7 @@
                     <span>お出かけオプション</span>
                     <span>5,500円</span>
                   </div>
-                  <p class="text-[10px] text-brand-dark texture-tight mt-1 opacity-80">（おうちフォトスタジオと重氏稲荷神社でのロケーション撮影を半々で楽しめます。）</p>
+                  <p class="text-[10px] text-brand-dark texture-tight mt-1 opacity-80">（おうちフォトスタジオと重氏稲荷神社や近隣のロケーション撮影を半々で楽しめます。）</p>
                 </div>
               </div>
 
@@ -591,12 +671,20 @@
                   <span>16,500円〜</span>
                 </div>
                 <div class="flex justify-between items-baseline mb-2">
+                  <span>753ハンドメイド着物レンタル着付け</span>
+                  <span>6,600円</span>
+                  </div>
+                <div class="flex justify-between items-baseline mb-2">
                   <span>ママ着物レンタル着付け</span>
                   <span>22,000円</span>
                 </div>
                 <div class="flex justify-between items-baseline mb-2">
-                  <span>訪問着着付け</span>
+                  <span>小紋・訪問着・袴着付け</span>
                   <span>7,700円</span>
+                </div>
+               <div class="flex justify-between items-baseline mb-2">
+                  <span>振袖着付け</span>
+                  <span>11,000円</span>
                 </div>
                 <div class="flex justify-between items-baseline mb-2">
                   <span>753着付け</span>
@@ -613,6 +701,10 @@
                 <div class="flex justify-between items-baseline bg-brand-light/40 p-1 px-2 rounded">
                   <span>3歳〜簡易ヘアメイク</span>
                   <span>サービス</span>
+                </div>
+                <div class="flex justify-between items-baseline bg-brand-light/40 p-1 px-2 rounded">
+                  <span>お任せまとめ髪（肩下3㎝～）</span>
+                  <span>1,100円</span>
                 </div>
               </div>
             </div>
@@ -644,7 +736,7 @@
     </section>
 
     <!-- FLOW セクション -->
-    <section class="px-6 py-16">
+    <section id="flow" class="px-6 py-16">
       <div class="max-w-xl mx-auto">
         <div class="text-center mb-12">
           <p class="font-serif text-xs tracking-[0.2em] text-brand uppercase mb-2">FLOW</p>
@@ -659,7 +751,7 @@
             <div class="step-number shrink-0">1</div>
             <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-light/50 flex-1">
               <h4 class="font-bold text-brand-dark mb-2">お問い合わせ・ご予約</h4>
-              <p class="text-sm text-brand-text/70 leading-relaxed">LINEから簡単にご予約できます。おうちフォトスタジオの所在地は、ご予約の方にお伝えします。</p>
+              <p class="text-sm text-brand-text/70 leading-relaxed">LINEから簡単にご予約できます。</p>
             </div>
           </div>
 
@@ -717,7 +809,7 @@
     </section>
 
     <!-- Q&A セクション -->
-    <section class="px-6 py-16 bg-brand-light/20">
+    <section id="qa" class="px-6 py-16 bg-brand-light/20">
       <div class="max-w-xl mx-auto">
         <h3 class="text-center font-serif text-2xl tracking-widest mb-4 text-brand-text">Q&A</h3>
         <p class="text-center text-sm text-brand-dark mb-12">ご予約前の不安を解消します.</p>
@@ -815,7 +907,7 @@
     </section>
 
     <!-- PROFILE セクション -->
-    <section class="px-6 py-16">
+    <section id="profile" class="px-6 py-16">
       <div class="max-w-xl mx-auto text-center">
         <h3 class="font-serif text-2xl tracking-widest mb-10 text-brand-text">PROFILE</h3>
         
@@ -853,38 +945,56 @@
     </section>
 
     <!-- ⑤ ギャラリー -->
-    <section class="px-4 py-16 border-t border-brand-light">
+    <section id="gallery" class="px-4 py-16 border-t border-brand-light">
       <h3 class="text-center font-serif text-2xl tracking-widest mb-10 text-brand-text">Gallery</h3>
       
       <div class="grid grid-cols-3 gap-2 sm:gap-3">
-        <!-- ギャラリー画像 -->
+        <!-- 1-3 -->
         <div><img src="https://i.ibb.co/B5myNVMQ/IMG-7864.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/pr2fXf2r/IMG-7865.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/qFBjrMfW/IMG-7821.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+        
+        <!-- 4-6 -->
         <div><img src="https://i.ibb.co/prvLck9q/IMG-7806.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/5xYp34Ty/IMG-7807.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/gLN8v4p3/IMG-7810.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+        
+        <!-- 7-9 -->
         <div><img src="https://i.ibb.co/zVg6qLD8/IMG-7796.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/rG3vbDYd/IMG-7719.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/vvZ4GSBC/IMG-7708.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+        
+        <!-- 10-12 -->
         <div><img src="https://i.ibb.co/Rp9Gvsbp/IMG-6920.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/JWRgXk6S/IMG-6905.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/PsX5Sygw/IMG-7721.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+        
+        <!-- 13-15 -->
         <div><img src="https://i.ibb.co/KzDNb1F8/IMG-7564.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
         <div><img src="https://i.ibb.co/nqYpWWGW/IMG-7689.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
         <div><img src="https://i.ibb.co/8DZRqwF9/IMG-6774.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
+        
+        <!-- 16-18 -->
         <div><img src="https://i.ibb.co/xSs5sWC8/IMG-0547.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
         <div><img src="https://i.ibb.co/21V4T0hN/1834-E8-C9-8-AAF-43-E8-AE6-A-AC3-D6-BEE68-F0.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/ymh2mY6s/473-A5281-Original.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+
+        <!-- 19-21 -->
         <div><img src="https://i.ibb.co/675DfXXN/IMG-7893.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/d4gLzkBj/IMG-7849.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
         <div><img src="https://i.ibb.co/4gP3nC1v/IMG-7850.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+
+        <!-- 22-24 -->
         <div><img src="https://i.ibb.co/FbQZ13VP/IMG-6789.png" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/fYZ2KrTv/592282-E1-89-AE-4-DBE-A02-F-2-B2-B5-C4-F11-D9473-A5549.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
         <div><img src="https://i.ibb.co/MxtZgZNT/IMG-3389.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+
+        <!-- 25-27 -->
         <div><img src="https://i.ibb.co/JjPXJHnp/IMG-0542.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover object-top shadow-sm"></div>
         <div><img src="https://i.ibb.co/93tdBcc1/IMG-5180.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/Q7wyXRs2/IMG-0200.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
+
+        <!-- 28-30 -->
         <div><img src="https://i.ibb.co/d41ZPXrf/line-oa-chat-240401-071754.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/DHBFHBV1/IMG-7868.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
         <div><img src="https://i.ibb.co/84QjR0pr/IMG-6971.jpg" alt="Gallery" class="rounded-xl w-full aspect-square object-cover shadow-sm"></div>
