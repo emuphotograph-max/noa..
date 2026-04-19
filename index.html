@@ -399,24 +399,53 @@
               </div>
             </div>
           </div>
-          
-          <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-light">
-            <button onclick="togglePlan('b-plan3', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
+           <div class="bg-white rounded-2xl p-5 shadow-sm border-2 border-brand/40 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-brand text-white text-[10px] px-3 py-1 rounded-bl-lg font-bold">しっかり残す</div>
+            <button onclick="togglePlan('om-standard', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
               <div>
                 <p class="font-bold text-lg mb-1 group-hover:text-brand-dark transition-colors">お宮参り・百日記念</p>
+                <p class="text-brand-dark text-sm tracking-wide">70枚データ｜38,500円</p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-dark">
+                <i data-lucide="chevron-down" class="w-5 h-5 icon-rotate"></i>
+              </div>
+            </button>
+            <div id="om-standard" class="plan-content">
+              <div class="pt-4 mt-4 border-t border-gray-100 text-sm text-brand-text/80 leading-relaxed">
+                ご祈祷の前後やスタジオで、ゆったり1時間撮影する一番人気のプランです.<br><br>
+                <ul class="space-y-2 mb-3">
+                  <li>・家族写真 / 赤ちゃんソロ / パパママとの2ショット</li>
+                  <li>・手足のパーツフォトなども含みます</li>
+                  <li>・<span class="font-bold">産着（祝い着）無料レンタル付き</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-light">
+            <button onclick="togglePlan('om-light', this)" class="w-full text-left flex justify-between items-center focus:outline-none group">
+              <div>
+                <p class="font-bold text-lg mb-1 group-hover:text-brand-dark transition-colors">お宮参り・百日記念 ライト</p>
                 <p class="text-brand-dark text-sm tracking-wide">30枚データ｜27,500円</p>
               </div>
               <div class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-dark">
                 <i data-lucide="chevron-down" class="w-5 h-5 icon-rotate"></i>
               </div>
             </button>
-            <div id="b-plan3" class="plan-content">
+            <div id="om-light" class="plan-content">
               <div class="pt-4 mt-4 border-t border-gray-100 text-sm text-brand-text/80 leading-relaxed">
-                ご家族の大切な行事を美しく記録します.<br>
-                <span class="inline-block bg-brand/10 text-brand-dark px-2 py-1 rounded text-xs mt-2">産着無料貸し出しあり（赤・黒）</span>
+                大切な瞬間を凝縮して残したい方に、約30分の短時間撮影プランです.<br><br>
+                <ul class="space-y-2 mb-3">
+                  <li>・赤ちゃんソロ ＋ 家族集合写真</li>
+                  <li>・<span class="font-bold">産着（祝い着）無料レンタル付き</span></li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+         
+        
 
           <!-- はじまりの1年プラン -->
           <div class="bg-white rounded-2xl p-5 shadow-sm border-2 border-brand/40 relative overflow-hidden">
