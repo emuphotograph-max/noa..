@@ -132,13 +132,12 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-5 text-xs font-semibold text-charcoal-text tracking-wider">
-                <a href="#about" class="hover:text-gold-matte transition-colors">強み</a>
                 <a href="#plans" class="hover:text-gold-matte transition-colors">撮影プラン</a>
-                <a href="#flow" class="hover:text-gold-matte transition-colors">流れ</a>
-                <a href="#simulator" class="hover:text-gold-matte transition-colors">料金計算</a>
-                <a href="#gallery" class="hover:text-gold-matte transition-colors">ギャラリー</a>
+                <a href="#about" class="hover:text-gold-matte transition-colors">強み</a>
                 <a href="#voice" class="hover:text-gold-matte transition-colors">お客様の声</a>
-                <a href="#area" class="hover:text-gold-matte transition-colors">出張エリア</a>
+                <a href="#options" class="hover:text-gold-matte transition-colors">オプション・着物</a>
+                <a href="#simulator" class="hover:text-gold-matte transition-colors">料金計算</a>
+                <a href="#area" class="hover:text-gold-matte transition-colors">出張エリア・流れ</a>
                 <a href="#faq" class="hover:text-gold-matte transition-colors">よくある質問</a>
             </nav>
 
@@ -157,19 +156,19 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobileMenu" class="hidden md:hidden bg-[#F8F7F5] border-b border-[#E2DDD7] px-6 py-4 space-y-3 text-xs font-semibold">
-            <a href="#about" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">私たちの強み</a>
+            <a href="#genres" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">ジャンル一覧</a>
             <a href="#plans" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">撮影プラン</a>
-            <a href="#flow" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">ご利用の流れ</a>
-            <a href="#simulator" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">見積もり計算機</a>
-            <a href="#gallery" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">フォトギャラリー</a>
+            <a href="#about" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">私たちの強み</a>
             <a href="#voice" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">お客様の声</a>
-            <a href="#area" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">出張エリア診断</a>
+            <a href="#options" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">オプション・着物カタログ</a>
+            <a href="#simulator" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">見積もり計算機</a>
+            <a href="#area" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">出張エリア診断・流れ</a>
             <a href="#faq" class="block py-1 hover:text-gold-matte" onclick="toggleMenu()">よくある質問</a>
-            <a href="#cta" class="block py-1 hover:text-gold-matte text-accent-gold" onclick="toggleMenu()">ご予約・お問い合わせ</a>
+            <a href="#cta" class="block py-1 hover:text-gold-matte text-accent-gold" onclick="toggleMenu()">LINEで予約・ご相談</a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- 1. HERO SECTION (ファーストビュー) -->
     <section class="relative overflow-hidden py-16 lg:py-24 bg-[#F8F7F5]">
         <!-- HERO BACKGROUND IMAGE WITH SOFT OVERLAY -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -197,18 +196,6 @@
                     
                     <!-- キャッチコピー -->
                     <div class="space-y-4">
-                        <!-- 対応ジャンル一覧タグ -->
-                        <div class="inline-flex flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold text-gold-dark bg-bg-cream-soft/90 px-3.5 py-1.5 rounded-full border border-gold-soft shadow-xs">
-                            <span>成人式・振袖</span>
-                            <span class="text-gold-soft">｜</span>
-                            <span class="text-accent-gold font-bold">ママ振袖・持ち込み大歓迎</span>
-                            <span class="text-gold-soft">｜</span>
-                            <span>お宮参り</span>
-                            <span class="text-gold-soft">｜</span>
-                            <span>七五三</span>
-                            <span class="text-gold-soft">｜</span>
-                            <span>記念日</span>
-                        </div>
 
                         <!-- メインキャッチコピー -->
                         <h1 class="space-y-1">
@@ -308,94 +295,32 @@
         </div>
     </section>
 
-    <!-- SECTION: 3 STRENGTHS -->
-    <section id="about" class="py-16 md:py-24 bg-bg-cream relative">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gold-soft text-[11px] font-bold text-gold-dark mb-2">
-                    <i class="fa-solid fa-crown text-gold-matte"></i> OUR STRENGTHS
-                </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">noa photo が選ばれる3つの強み</h2>
-                <p class="text-xs md:text-sm text-muted-text mt-2">ご家族全員が安心して最高の笑顔になれる理由</p>
-                <div class="w-12 h-0.5 bg-gold-matte mx-auto mt-3"></div>
-            </div>
-
-            <div class="space-y-10">
-                
-                <!-- Strength 1 -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-full md:w-2/5 relative">
-                        <div class="photo-frame">
-                            <img src="https://i.ibb.co/84QjR0pr/IMG-6971.jpg" 
-                                 alt="産婦人科看護師経験のある安心感" 
-                                 class="w-full h-48 object-cover rounded"
-                                 referrerpolicy="no-referrer"
-                                 onerror="this.src='https://placehold.co/600x400/F0EDE8/2A2928?text=Nurse+Care'">
-                        </div>
-                        <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-ash-grey text-white font-bold flex items-center justify-center text-sm shadow">01</span>
-                    </div>
-                    <div class="w-full md:w-3/5 space-y-3">
-                        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-ash-light text-ash-grey border border-ash-grey/30">産婦人科看護師経験のあるフォトグラファー</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-charcoal-text">
-                            お子様の体調ケアも、ご家族の安心も万全
-                        </h3>
-                        <p class="text-xs md:text-sm text-muted-text leading-relaxed">
-                            小さな赤ちゃんのお宮参りから、体調が心配な妊婦様、ご高齢のご家族まで。産婦人科看護師としての経験があるからこそ、赤ちゃんやお子様のペースや体調の変化にいち早く気づき、優しくフォローします。ご家族みんなが無理なくリラックスして撮影に臨めます。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Strength 2 -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm flex flex-col md:flex-row-reverse items-center gap-8">
-                    <div class="w-full md:w-2/5 relative">
-                        <div class="photo-frame">
-                            <img src="https://i.ibb.co/hRZ9qky9/IMG-6551.jpg" 
-                                 alt="着付け師による高品質着付け" 
-                                 class="w-full h-48 object-cover rounded"
-                                 referrerpolicy="no-referrer"
-                                 onerror="this.src='https://placehold.co/600x400/F0EDE8/2A2928?text=Kimono'">
-                        </div>
-                        <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gold-matte text-white font-bold flex items-center justify-center text-sm shadow">02</span>
-                    </div>
-                    <div class="w-full md:w-3/5 space-y-3">
-                        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-bg-cream-soft text-gold-dark border border-gold-soft">着付け師だから</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-charcoal-text">
-                            「苦しくない・崩れない」美しい仕上がり
-                        </h3>
-                        <p class="text-xs md:text-sm text-muted-text leading-relaxed">
-                            お支度から撮影終了まで一貫してサポート。「途中で苦しくて脱ぎたがる」「動いて着崩れてしまう」といった和装特有のストレスを解消します。お母様やご家族の着付け・簡易ヘアまでワンストップで手配できるため、当日の準備も驚くほどスムーズです。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Strength 3 -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-full md:w-2/5 relative">
-                        <div class="photo-frame">
-                            <img src="https://i.ibb.co/CpJ5Qkbp/IMG-8570.jpg" 
-                                 alt="広島市・安芸郡府中を中心に出張撮影" 
-                                 class="w-full h-48 object-cover rounded"
-                                 referrerpolicy="no-referrer"
-                                 onerror="this.src='https://placehold.co/600x400/F0EDE8/2A2928?text=Hiroshima'">
-                        </div>
-                        <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gold-dark text-white font-bold flex items-center justify-center text-sm shadow">03</span>
-                    </div>
-                    <div class="w-full md:w-3/5 space-y-3">
-                        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-bg-cream-soft text-gold-matte border border-gold-matte/30">広島市・安芸郡府中を中心に出張撮影</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-charcoal-text">
-                            出張ロケーション撮影
-                        </h3>
-                        <p class="text-xs md:text-sm text-muted-text leading-relaxed">
-                            広島市東区戸坂から15km圏内（広島市内全域・安芸郡府中周辺）は出張費無料。ご自宅、馴染みの神社、お気に入りのお散歩コースなど、ご家族にとって一番落ち着く「思い出の場所」が貸切スタジオに早変わり。スタジオの緊張感から解放された、自然体の輝く笑顔を切り取ります。
-                        </p>
-                    </div>
-                </div>
-
+    <!-- 2. 成人式・振袖｜お宮参り｜七五三｜記念日 (ジャンル案内) -->
+    <section id="genres" class="py-8 bg-white border-y border-[#E2DDD7] relative">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-bold text-gold-dark bg-bg-cream-soft/90 px-6 py-3 rounded-2xl border border-gold-soft shadow-xs">
+                <a href="#plans" class="hover:text-accent-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-asterisk text-gold-matte text-[10px]"></i> 成人式・振袖
+                </a>
+                <span class="text-gold-soft hidden sm:inline">｜</span>
+                <span class="text-accent-gold font-semibold text-[11px] sm:text-xs">ママ振袖・持ち込み大歓迎</span>
+                <span class="text-gold-soft">｜</span>
+                <a href="#plans" class="hover:text-accent-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-asterisk text-gold-matte text-[10px]"></i> お宮参り
+                </a>
+                <span class="text-gold-soft">｜</span>
+                <a href="#plans" class="hover:text-accent-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-asterisk text-gold-matte text-[10px]"></i> 七五三
+                </a>
+                <span class="text-gold-soft">｜</span>
+                <a href="#plans" class="hover:text-accent-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-asterisk text-gold-matte text-[10px]"></i> 記念日
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: SHOOTING PLANS (撮影メニュー) -->
+    <!-- 3. SHOOTING PLANS (撮影プラン) -->
     <section id="plans" class="py-16 md:py-24 bg-white relative">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -514,6 +439,7 @@
                             <span class="px-3 py-1 bg-white border border-gold-soft rounded-full text-xs font-medium text-charcoal-text">振袖レンタル</span>
                             <span class="px-3 py-1 bg-white border border-gold-soft rounded-full text-xs font-medium text-charcoal-text">振袖着付け</span>
                             <span class="px-3 py-1 bg-white border border-gold-soft rounded-full text-xs font-medium text-charcoal-text">プロヘアメイク</span>
+                            <span class="px-3 py-1 bg-gold-soft/50 border border-gold-matte text-gold-dark font-bold rounded-full text-xs">ママ振袖・持ち込みOK</span>
                         </div>
 
                         <p class="text-xs md:text-sm text-muted-text leading-relaxed">
@@ -576,93 +502,343 @@
         </div>
     </section>
 
-    <!-- SECTION: FLOW (撮影の流れ) -->
-    <section id="flow" class="py-16 md:py-24 bg-bg-cream relative border-t border-[#E2DDD7]">
+    <!-- 4. noa photoが選ばれる3つの理由 (STRENGTHS) -->
+    <section id="about" class="py-16 md:py-24 bg-bg-cream relative border-t border-[#E2DDD7]">
         <div class="max-w-5xl mx-auto px-4">
-            
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
-                    <i class="fa-solid fa-list-check text-ash-grey"></i> HOW IT WORKS
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gold-soft text-[11px] font-bold text-gold-dark mb-2">
+                    <i class="fa-solid fa-crown text-gold-matte"></i> OUR STRENGTHS
                 </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">ご予約から撮影までの流れ</h2>
-                <p class="text-xs text-muted-text mt-1">初めての方でもスムーズにご案内いたします</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">noa photo が選ばれる3つの強み</h2>
+                <p class="text-xs md:text-sm text-muted-text mt-2">ご家族全員が安心して最高の笑顔になれる理由</p>
                 <div class="w-12 h-0.5 bg-gold-matte mx-auto mt-3"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="space-y-10">
                 
-                <div class="bg-white rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="w-8 h-8 rounded-full bg-ash-grey text-white font-bold text-sm flex items-center justify-center">1</span>
-                            <i class="fa-brands fa-line text-2xl text-ash-grey"></i>
+                <!-- Strength 1 -->
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-2/5 relative">
+                        <div class="photo-frame">
+                            <img src="https://i.ibb.co/84QjR0pr/IMG-6971.jpg" 
+                                 alt="産婦人科看護師経験のある安心感" 
+                                 class="w-full h-48 object-cover rounded"
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.src='https://placehold.co/600x400/F0EDE8/2A2928?text=Nurse+Care'">
                         </div>
-                        <h3 class="font-bold text-base text-charcoal-text mb-2">お問い合わせ・ご予約</h3>
-                        <p class="text-xs text-muted-text leading-relaxed">
-                            公式LINEから簡単にご予約・お問い合わせが可能です。ご希望の日程や内容をお送りください。
+                        <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-ash-grey text-white font-bold flex items-center justify-center text-sm shadow">01</span>
+                    </div>
+                    <div class="w-full md:w-3/5 space-y-3">
+                        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-ash-light text-ash-grey border border-ash-grey/30">産婦人科看護師経験のあるフォトグラファー</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-charcoal-text">
+                            お子様の体調ケアも、ご家族の安心も万全
+                        </h3>
+                        <p class="text-xs md:text-sm text-muted-text leading-relaxed">
+                            小さな赤ちゃんのお宮参りから、体調が心配な妊婦様、ご高齢のご家族まで。産婦人科看護師としての経験があるからこそ、赤ちゃんやお子様のペースや体調の変化にいち早く気づき、優しくフォローします。ご家族みんなが無理なくリラックスして撮影に臨めます。
                         </p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="w-8 h-8 rounded-full bg-gold-dark text-white font-bold text-sm flex items-center justify-center">2</span>
-                            <i class="fa-solid fa-comments text-2xl text-gold-dark"></i>
+                <!-- Strength 2 -->
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="w-full md:w-2/5 relative">
+                        <div class="photo-frame">
+                            <img src="https://i.ibb.co/hRZ9qky9/IMG-6551.jpg" 
+                                 alt="着付け師による高品質着付け" 
+                                 class="w-full h-48 object-cover rounded"
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.src='https://placehold.co/600x400/F0EDE8/2A2928?text=Kimono'">
                         </div>
-                        <h3 class="font-bold text-base text-charcoal-text mb-2">打ち合わせ・ヒアリング</h3>
-                        <p class="text-xs text-muted-text leading-relaxed">
-                            希望日時や撮影場所、衣装や着付けのご要望を詳しくお聞きします。
+                        <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gold-matte text-white font-bold flex items-center justify-center text-sm shadow">02</span>
+                    </div>
+                    <div class="w-full md:w-3/5 space-y-3">
+                        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-bg-cream-soft text-gold-dark border border-gold-soft">着付け師だから</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-charcoal-text">
+                            「苦しくない・崩れない」美しい仕上がり
+                        </h3>
+                        <p class="text-xs md:text-sm text-muted-text leading-relaxed">
+                            お支度から撮影終了まで一貫してサポート。「途中で苦しくて脱ぎたがる」「動いて着崩れてしまう」といった和装特有のストレスを解消します。お母様やご家族の着付け・簡易ヘアまでワンストップで手配できるため、当日の準備も驚くほどスムーズです。
                         </p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="w-8 h-8 rounded-full bg-gold-matte text-white font-bold text-sm flex items-center justify-center">3</span>
-                            <i class="fa-solid fa-file-invoice-dollar text-2xl text-gold-matte"></i>
+                <!-- Strength 3 -->
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-2/5 relative">
+                        <div class="photo-frame">
+                            <img src="https://i.ibb.co/CpJ5Qkbp/IMG-8570.jpg" 
+                                 alt="広島市・安芸郡府中を中心に出張撮影" 
+                                 class="w-full h-48 object-cover rounded"
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.src='https://placehold.co/600x400/F0EDE8/2A2928?text=Hiroshima'">
                         </div>
-                        <h3 class="font-bold text-base text-charcoal-text mb-2">ご予約確定（お振込）</h3>
-                        <p class="text-xs text-muted-text leading-relaxed">
-                            指定口座への事前振り込みの確認をもって、正式なご予約確定となります。
-                        </p>
+                        <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gold-dark text-white font-bold flex items-center justify-center text-sm shadow">03</span>
                     </div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="w-8 h-8 rounded-full bg-accent-gold text-white font-bold text-sm flex items-center justify-center">4</span>
-                            <i class="fa-solid fa-photo-film text-2xl text-accent-gold"></i>
-                        </div>
-                        <h3 class="font-bold text-base text-charcoal-text mb-2">撮影・納品</h3>
-                        <p class="text-xs text-muted-text leading-relaxed">
-                            フォトグラファーが、厳選したお写真を1週間程度で、高画質データにてお届けします。
+                    <div class="w-full md:w-3/5 space-y-3">
+                        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-bg-cream-soft text-gold-matte border border-gold-matte/30">広島市・安芸郡府中を中心に出張撮影</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-charcoal-text">
+                            出張ロケーション撮影
+                        </h3>
+                        <p class="text-xs md:text-sm text-muted-text leading-relaxed">
+                            広島市東区戸坂から15km圏内（広島市内全域・安芸郡府中周辺）は出張費無料。ご自宅、馴染みの神社、お気に入りのお散歩コースなど、ご家族にとって一番落ち着く「思い出の場所」が貸切スタジオに早変わり。スタジオの緊張感から解放された、自然体の輝く笑顔を切り取ります。
                         </p>
                     </div>
                 </div>
 
             </div>
-
-            <!-- Policy Box -->
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm max-w-3xl mx-auto">
-                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-[#E2DDD7]">
-                    <i class="fa-solid fa-circle-info text-ash-grey text-xl"></i>
-                    <h3 class="text-lg font-bold text-charcoal-text">ご予約・キャンセルポリシー</h3>
-                </div>
-                <div class="text-xs md:text-sm text-muted-text leading-relaxed space-y-2">
-                    <p>・お振込み後〜：キャンセル料 5,000円</p>
-                    <p>・1ヶ月前〜前日：撮影料金の50％ / 当日：撮影料金の100％</p>
-                    <p class="text-accent-gold font-bold pt-1">※ お子さまの急な発熱や悪天候による日程変更は、可能な限り柔軟（手数料なし）に対応しております。</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- INTERACTIVE PRICE SIMULATOR SECTION -->
-    <section id="simulator" class="py-16 bg-gradient-to-b from-white via-bg-cream-soft to-white relative border-y border-[#E2DDD7]">
+    <!-- 5. お客様の声 (CUSTOMER VOICES) -->
+    <section id="voice" class="py-16 bg-white border-t border-[#E2DDD7] relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-accent-gold mb-2">
+                    <i class="fa-solid fa-heart text-gold-matte"></i> VOICE & REVIEWS
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">お客様の声</h2>
+                <p class="text-xs text-muted-text mt-1">noa photoをご利用いただいたご家族からの心温まるメッセージ</p>
+                <div class="w-12 h-0.5 bg-gold-matte mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- Voice 1 -->
+                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between hover:border-gold-matte transition-all duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-gold-matte text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-ash-grey border border-[#E2DDD7]">七五三・キッズ撮影</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-charcoal-text border-b border-[#E2DDD7] pb-2">「普通の写真館だと見られない自然な笑顔！」</h3>
+                        <p class="text-xs text-muted-text leading-relaxed font-mincho">
+                            「素敵な写真ばっかりで、とてもいい記念になりました！落ち着きない子どもたちなので、普通の写真館だとこんないい笑顔にならないんですよね。自然な笑顔で撮ってもらえて嬉しいです✨」
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-[#E2DDD7] flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gold-soft flex items-center justify-center text-gold-dark font-bold text-xs">
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-charcoal-text">広島市 H様ご家族</p>
+                            <p class="text-[10px] text-muted-text">お子様ご撮影</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice 2 -->
+                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between hover:border-gold-matte transition-all duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-gold-matte text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-gold-dark border border-gold-soft">リピーター様</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-charcoal-text border-b border-[#E2DDD7] pb-2">「今回も素敵な写真をありがとうございました！」</h3>
+                        <p class="text-xs text-muted-text leading-relaxed font-mincho">
+                            「今回も素敵な写真をありがとうございました！毎回子供たちの成長を綺麗に残していただけてとても感動しています。またよろしくお願い致します🌸」
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-[#E2DDD7] flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gold-soft flex items-center justify-center text-gold-dark font-bold text-xs">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-charcoal-text">安芸郡 K様ご家族</p>
+                            <p class="text-[10px] text-muted-text">記念日リピート撮影</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice 3 -->
+                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between hover:border-gold-matte transition-all duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-gold-matte text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-accent-gold border border-gold-soft">お宮参り・着付け</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-charcoal-text border-b border-[#E2DDD7] pb-2">「看護師さん＆着付け師さんの安心感が凄い！」</h3>
+                        <p class="text-xs text-muted-text leading-relaxed font-mincho">
+                            「産婦人科看護師経験のあるカメラマンさんだったから、人見知りの子供がすぐに打ち解けてビックリしました！着付けも手際よく全部やってくれて、本当に楽でした！」
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-[#E2DDD7] flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gold-soft flex items-center justify-center text-gold-dark font-bold text-xs">
+                            <i class="fa-solid fa-baby"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-charcoal-text">広島市 S様ご家族</p>
+                            <p class="text-[10px] text-muted-text">お宮参り・着付け手配</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. オプション・着物オプション・キモノカタログ (OPTIONS) -->
+    <section id="options" class="py-16 bg-white border-t border-[#E2DDD7] relative">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
+                    <i class="fa-solid fa-sliders text-ash-grey"></i> OPTIONS
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">オプションメニュー・着物カタログ</h2>
+                <p class="text-xs text-muted-text mt-1">衣装レンタルや各種着付け、アルバム作成もまとめて手配いただけます</p>
+                <div class="w-12 h-0.5 bg-gold-soft mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm">
+                    <h3 class="text-base font-bold text-charcoal-text mb-4 flex items-center gap-2 border-b border-[#E2DDD7] pb-3">
+                        <i class="fa-solid fa-sparkles text-gold-matte"></i> 撮影・アルバムオプション
+                    </h3>
+                    <ul class="space-y-4 text-xs divide-y divide-[#E2DDD7]">
+                        <li class="flex justify-between items-center pt-2">
+                            <span class="font-medium">土日祝撮影追加</span>
+                            <span class="font-bold text-charcoal-text">+5,000円</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-3">
+                            <div>
+                                <span class="font-medium block">見開きデザインアルバム</span>
+                            </div>
+                            <span class="font-bold text-charcoal-text">20,000円</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-base font-bold text-charcoal-text mb-4 flex items-center gap-2 border-b border-[#E2DDD7] pb-3">
+                            <i class="fa-solid fa-vest text-gold-dark"></i> キモノ・着付けオプション
+                        </h3>
+                        <ul class="space-y-3 text-xs divide-y divide-[#E2DDD7]">
+                            <li class="pt-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">七五三着付け（簡易ヘアメイク付き）</span>
+                                    <span class="font-bold text-charcoal-text">5,000円〜</span>
+                                </div>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">振袖着付け</span>
+                                    <span class="font-bold text-charcoal-text">13,000円</span>
+                                </div>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">ヘアメイク</span>
+                                    <span class="font-bold text-charcoal-text">13,000円〜</span>
+                                </div>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">振袖レンタル</span>
+                                    <span class="font-bold text-charcoal-text">50,000円〜</span>
+                                </div>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">お宮参り 産着レンタル（赤・黒）</span>
+                                    <span class="font-bold text-charcoal-text">5,000円</span>
+                                </div>
+                                <span class="text-[10px] text-accent-gold font-semibold block mt-0.5">※ 30日前までの早期予約で 0円！</span>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">七五三 着物レンタル（A〜Dランク）</span>
+                                    <span class="font-bold text-charcoal-text">10,000円〜</span>
+                                </div>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">訪問着レンタル</span>
+                                    <span class="font-bold text-charcoal-text">15,000円〜</span>
+                                </div>
+                            </li>
+                            <li class="pt-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">訪問着着付け（簡易ヘア付き）</span>
+                                    <span class="font-bold text-charcoal-text">10,000円</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- オンライン着物カタログ 案内カード -->
+                    <div class="mt-6 p-5 rounded-2xl bg-white border-2 border-gold-matte/70 shadow-md text-xs space-y-3">
+                        <div class="flex items-center justify-between border-b border-bg-cream-soft pb-2.5">
+                            <div class="font-bold text-charcoal-text text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-book-open text-gold-matte text-base"></i>
+                                <span>キモノカタログ（WEB提携衣装一覧）</span>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full bg-gold-soft/40 text-gold-dark text-[10px] font-bold">WEBカタログ</span>
+                        </div>
+                        
+                        <p class="text-[11px] text-muted-text leading-relaxed">
+                            豊富なデザインからお好みのお着物をWEB上でご覧いただけます。<br>
+                            以下のボタンより提携カタログサイトへアクセスし、ログインIDとパスワードをご入力ください。
+                        </p>
+
+                        <!-- ID / Password Badge Box -->
+                        <div class="p-3 bg-bg-cream rounded-xl border border-gold-soft flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-4 text-xs">
+                                <div>
+                                    <span class="text-[10px] text-muted-text block font-semibold">【ログインID】</span>
+                                    <span class="font-bold text-charcoal-text text-sm tracking-wider bg-white px-2.5 py-0.5 rounded border border-[#E2DDD7] select-all">1234</span>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-muted-text block font-semibold">【パスワード】</span>
+                                    <span class="font-bold text-charcoal-text text-sm tracking-wider bg-white px-2.5 py-0.5 rounded border border-[#E2DDD7] select-all">001</span>
+                                </div>
+                            </div>
+                            <a href="https://kimono-c.jp/login/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-gold hover:bg-gold-dark text-white font-bold text-xs shadow-xs transition-all transform hover:-translate-y-0.5">
+                                <span>キモノカタログを見る</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+
+                        <div class="text-[10px] text-muted-text flex items-start gap-1 pt-1">
+                            <i class="fa-solid fa-circle-info text-gold-matte mt-0.5"></i>
+                            <span>気になったお着物がございましたら、お着物番号やスクリーンショットを公式LINEにてお送りください。</span>
+                        </div>
+                    </div>
+
+                    <!-- 備考欄 -->
+                    <div class="mt-4 p-4 rounded-2xl bg-white border border-gold-soft/80 shadow-xs text-xs space-y-2">
+                        <div class="font-bold text-gold-dark flex items-center gap-1.5 border-b border-bg-cream-soft pb-1.5">
+                            <i class="fa-solid fa-circle-info text-gold-matte"></i> 着物レンタルに関する備考・ご注意点
+                        </div>
+                        <ul class="space-y-1.5 text-[11px] text-muted-text leading-relaxed">
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-gold-matte font-bold">・</span>
+                                <span><strong>自社・外部サービス対応：</strong>自社取り扱いのお着物に加え、豊富なデザインから選べる外部提携レンタルサービス（キモノカタログ）もご用意しております。</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-gold-matte font-bold">・</span>
+                                <span><strong>自社着物：</strong>自社着物は、<a href="https://www.instagram.com/noa.photo33/" target="_blank" rel="noopener noreferrer" class="text-gold-dark font-bold underline hover:text-accent-gold">Instagramハイライト <i class="fa-brands fa-instagram"></i></a> からご覧頂けます。</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-gold-matte font-bold">・</span>
+                                <span><strong>七五三着物料金ランク：</strong>七五三の着物レンタルは、衣装のクオリティやブランドに応じた<strong>【A〜Dランク】</strong>の料金設定となっております。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 見積もり (ESTIMATOR) -->
+    <section id="simulator" class="py-16 bg-gradient-to-b from-white via-bg-cream-soft to-white relative border-t border-[#E2DDD7]">
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-10">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gold-matte text-[11px] font-bold text-gold-matte mb-2">
@@ -815,52 +991,138 @@
         </div>
     </section>
 
-    <!-- SERVICE AREA CHECKER -->
-    <section id="area" class="py-16 bg-white relative">
+    <!-- 8. 出張エリア診断 ＆ 流れ (AREA & FLOW) -->
+    <section id="area" class="py-16 bg-white relative border-t border-[#E2DDD7]">
         <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
-                    <i class="fa-solid fa-map-location-dot text-ash-grey"></i> SERVICE AREA DIAGNOSIS
+            
+            <!-- 出張エリア診断 -->
+            <div class="mb-16">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
+                        <i class="fa-solid fa-map-location-dot text-ash-grey"></i> SERVICE AREA DIAGNOSIS
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">出張エリア・交通費診断</h2>
+                    <p class="text-xs text-muted-text mt-1">広島市東区戸坂より15km圏内は出張交通費【無料】でお伺いします</p>
+                    <div class="w-12 h-0.5 bg-gold-soft mx-auto mt-3"></div>
                 </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">出張エリア・交通費診断</h2>
-                <p class="text-xs text-muted-text mt-1">広島市東区戸坂より15km圏内は出張交通費【無料】でお伺いします</p>
-                <div class="w-12 h-0.5 bg-gold-soft mx-auto mt-3"></div>
-            </div>
 
-            <div class="max-w-3xl mx-auto bg-bg-cream rounded-3xl p-6 md:p-8 border border-[#E2DDD7]">
-                <div class="space-y-4">
-                    <h3 class="text-lg font-bold text-charcoal-text flex items-center gap-2">
-                        <i class="fa-solid fa-magnifying-glass-location text-ash-grey"></i> ご希望のエリアをチェック
-                    </h3>
-                    <p class="text-xs text-muted-text leading-relaxed">
-                        以下から撮影予定地域をお選びください。出張交通費の目安を判定いたします。
-                    </p>
+                <div class="max-w-3xl mx-auto bg-bg-cream rounded-3xl p-6 md:p-8 border border-[#E2DDD7]">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-charcoal-text flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-location text-ash-grey"></i> ご希望のエリアをチェック
+                        </h3>
+                        <p class="text-xs text-muted-text leading-relaxed">
+                            以下から撮影予定地域をお選びください。出張交通費の目安を判定いたします。
+                        </p>
 
-                    <div class="space-y-3 pt-2">
-                        <select id="areaSelect" onchange="checkAreaFee()" class="w-full p-3 text-xs bg-white rounded-xl border border-[#E2DDD7] font-semibold text-charcoal-text focus:outline-none focus:border-ash-grey">
-                            <option value="free_higashi">広島市東区（戸坂・光町・牛田等）</option>
-                            <option value="free_fuchu">安芸郡府中町</option>
-                            <option value="free_naka">広島市中区（縮景園・護国神社等）</option>
-                            <option value="free_minami">広島市南区（比治山・宇品等）</option>
-                            <option value="free_nishi">広島市西区（横川・己斐等）</option>
-                            <option value="free_asaminami">広島市安佐南区（祇園・緑井等）</option>
-                            <option value="free_kaita">安芸郡海田町</option>
-                            <option value="check_asakita">広島市安佐北区（可部・白木等）</option>
-                            <option value="check_saeki">広島市佐伯区・廿日市市方面</option>
-                            <option value="check_other">その他（呉市・東広島市・県外など）</option>
-                        </select>
+                        <div class="space-y-3 pt-2">
+                            <select id="areaSelect" onchange="checkAreaFee()" class="w-full p-3 text-xs bg-white rounded-xl border border-[#E2DDD7] font-semibold text-charcoal-text focus:outline-none focus:border-ash-grey">
+                                <option value="free_higashi">広島市東区（戸坂・光町・牛田等）</option>
+                                <option value="free_fuchu">安芸郡府中町</option>
+                                <option value="free_naka">広島市中区（縮景園・護国神社等）</option>
+                                <option value="free_minami">広島市南区（比治山・宇品等）</option>
+                                <option value="free_nishi">広島市西区（横川・己斐等）</option>
+                                <option value="free_asaminami">広島市安佐南区（祇園・緑井等）</option>
+                                <option value="free_kaita">安芸郡海田町</option>
+                                <option value="check_asakita">広島市安佐北区（可部・白木等）</option>
+                                <option value="check_saeki">広島市佐伯区・廿日市市方面</option>
+                                <option value="check_other">その他（呉市・東広島市・県外など）</option>
+                            </select>
 
-                        <div id="areaResultBox" class="p-4 rounded-2xl bg-white border border-gold-matte text-xs space-y-1">
-                            <div class="font-bold text-gold-dark flex items-center gap-1.5" id="areaResultTitle">
-                                <i class="fa-solid fa-circle-check"></i> 出張交通費：無料（0円）エリアです
+                            <div id="areaResultBox" class="p-4 rounded-2xl bg-white border border-gold-matte text-xs space-y-1">
+                                <div class="font-bold text-gold-dark flex items-center gap-1.5" id="areaResultTitle">
+                                    <i class="fa-solid fa-circle-check"></i> 出張交通費：無料（0円）エリアです
+                                </div>
+                                <p class="text-[11px] text-muted-text" id="areaResultDesc">
+                                    拠点（戸坂）から15km以内のため、出張交通費はかかりません。ご自宅やお近くの神社等へお伺いします。
+                                </p>
                             </div>
-                            <p class="text-[11px] text-muted-text" id="areaResultDesc">
-                                拠点（戸坂）から15km以内のため、出張交通費はかかりません。ご自宅やお近くの神社等へお伺いします。
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- ご利用の流れ -->
+            <div id="flow" class="pt-8">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
+                        <i class="fa-solid fa-list-check text-ash-grey"></i> HOW IT WORKS
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">ご予約から撮影までの流れ</h2>
+                    <p class="text-xs text-muted-text mt-1">初めての方でもスムーズにご案内いたします</p>
+                    <div class="w-12 h-0.5 bg-gold-matte mx-auto mt-3"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    
+                    <div class="bg-bg-cream rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="w-8 h-8 rounded-full bg-ash-grey text-white font-bold text-sm flex items-center justify-center">1</span>
+                                <i class="fa-brands fa-line text-2xl text-ash-grey"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-charcoal-text mb-2">お問い合わせ・ご予約</h3>
+                            <p class="text-xs text-muted-text leading-relaxed">
+                                公式LINEから簡単にご予約・お問い合わせが可能です。ご希望の日程や内容をお送りください。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bg-cream rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="w-8 h-8 rounded-full bg-gold-dark text-white font-bold text-sm flex items-center justify-center">2</span>
+                                <i class="fa-solid fa-comments text-2xl text-gold-dark"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-charcoal-text mb-2">打ち合わせ・ヒアリング</h3>
+                            <p class="text-xs text-muted-text leading-relaxed">
+                                希望日時や撮影場所、衣装や着付けのご要望を詳しくお聞きします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bg-cream rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="w-8 h-8 rounded-full bg-gold-matte text-white font-bold text-sm flex items-center justify-center">3</span>
+                                <i class="fa-solid fa-file-invoice-dollar text-2xl text-gold-matte"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-charcoal-text mb-2">ご予約確定（お振込）</h3>
+                            <p class="text-xs text-muted-text leading-relaxed">
+                                指定口座への事前振り込みの確認をもって、正式なご予約確定となります。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bg-cream rounded-2xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="w-8 h-8 rounded-full bg-accent-gold text-white font-bold text-sm flex items-center justify-center">4</span>
+                                <i class="fa-solid fa-photo-film text-2xl text-accent-gold"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-charcoal-text mb-2">撮影・納品</h3>
+                            <p class="text-xs text-muted-text leading-relaxed">
+                                フォトグラファーが、厳選したお写真を1週間程度で、高画質データにてお届けします。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Policy Box -->
+                <div class="bg-bg-cream rounded-3xl p-6 md:p-8 border border-[#E2DDD7] shadow-sm max-w-3xl mx-auto">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-[#E2DDD7]">
+                        <i class="fa-solid fa-circle-info text-ash-grey text-xl"></i>
+                        <h3 class="text-lg font-bold text-charcoal-text">ご予約・キャンセルポリシー</h3>
+                    </div>
+                    <div class="text-xs md:text-sm text-muted-text leading-relaxed space-y-2">
+                        <p>・お振込み後〜：キャンセル料 5,000円</p>
+                        <p>・1ヶ月前〜前日：撮影料金の50％ / 当日：撮影料金の100％</p>
+                        <p class="text-accent-gold font-bold pt-1">※ お子さまの急な発熱や悪天候による日程変更は、可能な限り柔軟（手数料なし）に対応しております。</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -896,256 +1158,8 @@
         </div>
     </section>
 
-    <!-- SECTION: CUSTOMER VOICES (お客様の声) -->
-    <section id="voice" class="py-16 bg-white border-t border-[#E2DDD7] relative">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-accent-gold mb-2">
-                    <i class="fa-solid fa-heart text-gold-matte"></i> VOICE & REVIEWS
-                </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">お客様の声</h2>
-                <p class="text-xs text-muted-text mt-1">noa photoをご利用いただいたご家族からの心温まるメッセージ</p>
-                <div class="w-12 h-0.5 bg-gold-matte mx-auto mt-3"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                
-                <!-- Voice 1 -->
-                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between hover:border-gold-matte transition-all duration-300">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <div class="flex text-gold-matte text-xs">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-ash-grey border border-[#E2DDD7]">七五三・キッズ撮影</span>
-                        </div>
-                        <h3 class="text-sm font-bold text-charcoal-text border-b border-[#E2DDD7] pb-2">「普通の写真館だと見られない自然な笑顔！」</h3>
-                        <p class="text-xs text-muted-text leading-relaxed font-mincho">
-                            「素敵な写真ばっかりで、とてもいい記念になりました！落ち着きない子どもたちなので、普通の写真館だとこんないい笑顔にならないんですよね。自然な笑顔で撮ってもらえて嬉しいです✨」
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-4 border-t border-[#E2DDD7] flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-gold-soft flex items-center justify-center text-gold-dark font-bold text-xs">
-                            <i class="fa-solid fa-face-smile"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-charcoal-text">広島市 H様ご家族</p>
-                            <p class="text-[10px] text-muted-text">お子様ご撮影</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Voice 2 -->
-                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between hover:border-gold-matte transition-all duration-300">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <div class="flex text-gold-matte text-xs">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-gold-dark border border-gold-soft">リピーター様</span>
-                        </div>
-                        <h3 class="text-sm font-bold text-charcoal-text border-b border-[#E2DDD7] pb-2">「今回も素敵な写真をありがとうございました！」</h3>
-                        <p class="text-xs text-muted-text leading-relaxed font-mincho">
-                            「今回も素敵な写真をありがとうございました！毎回子供たちの成長を綺麗に残していただけてとても感動しています。またよろしくお願い致します🌸」
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-4 border-t border-[#E2DDD7] flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-gold-soft flex items-center justify-center text-gold-dark font-bold text-xs">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-charcoal-text">安芸郡 K様ご家族</p>
-                            <p class="text-[10px] text-muted-text">記念日リピート撮影</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Voice 3 -->
-                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between hover:border-gold-matte transition-all duration-300">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <div class="flex text-gold-matte text-xs">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-accent-gold border border-gold-soft">お宮参り・着付け</span>
-                        </div>
-                        <h3 class="text-sm font-bold text-charcoal-text border-b border-[#E2DDD7] pb-2">「看護師さん＆着付け師さんの安心感が凄い！」</h3>
-                        <p class="text-xs text-muted-text leading-relaxed font-mincho">
-                            「産婦人科看護師経験のあるカメラマンさんだったから、人見知りの子供がすぐに打ち解けてビックリしました！着付けも手際よく全部やってくれて、本当に楽でした！」
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-4 border-t border-[#E2DDD7] flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-gold-soft flex items-center justify-center text-gold-dark font-bold text-xs">
-                            <i class="fa-solid fa-baby"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-charcoal-text">広島市 S様ご家族</p>
-                            <p class="text-[10px] text-muted-text">お宮参り・着付け手配</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: OPTIONS MENU -->
-    <section id="options" class="py-16 bg-white relative">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
-                    <i class="fa-solid fa-sliders text-ash-grey"></i> OPTIONS
-                </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-charcoal-text tracking-wider">オプションメニュー一覧</h2>
-                <p class="text-xs text-muted-text mt-1">衣装レンタルや各種着付け、アルバム作成もまとめて手配いただけます</p>
-                <div class="w-12 h-0.5 bg-gold-soft mx-auto mt-3"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm">
-                    <h3 class="text-base font-bold text-charcoal-text mb-4 flex items-center gap-2 border-b border-[#E2DDD7] pb-3">
-                        <i class="fa-solid fa-sparkles text-gold-matte"></i> 撮影・アルバムオプション
-                    </h3>
-                    <ul class="space-y-4 text-xs divide-y divide-[#E2DDD7]">
-                        <li class="flex justify-between items-center pt-2">
-                            <span class="font-medium">土日祝撮影追加</span>
-                            <span class="font-bold text-charcoal-text">+5,000円</span>
-                        </li>
-                        <li class="flex justify-between items-center pt-3">
-                            <div>
-                                <span class="font-medium block">見開きデザインアルバム</span>
-                            </div>
-                            <span class="font-bold text-charcoal-text">20,000円</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-bg-cream rounded-3xl p-6 border border-[#E2DDD7] shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-base font-bold text-charcoal-text mb-4 flex items-center gap-2 border-b border-[#E2DDD7] pb-3">
-                            <i class="fa-solid fa-vest text-gold-dark"></i> キモノ・着付けオプション
-                        </h3>
-                        <ul class="space-y-3 text-xs divide-y divide-[#E2DDD7]">
-                            <li class="pt-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">七五三着付け（簡易ヘアメイク付き）</span>
-                                    <span class="font-bold text-charcoal-text">5,000円〜</span>
-                                </div>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">振袖着付け</span>
-                                    <span class="font-bold text-charcoal-text">13,000円</span>
-                                </div>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">ヘアメイク</span>
-                                    <span class="font-bold text-charcoal-text">13,000円〜</span>
-                                </div>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">振袖レンタル</span>
-                                    <span class="font-bold text-charcoal-text">50,000円〜</span>
-                                </div>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">お宮参り 産着レンタル（赤・黒）</span>
-                                    <span class="font-bold text-charcoal-text">5,000円</span>
-                                </div>
-                                <span class="text-[10px] text-accent-gold font-semibold block mt-0.5">※ 30日前までの早期予約で 0円！</span>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">七五三 着物レンタル（A〜Dランク）</span>
-                                    <span class="font-bold text-charcoal-text">10,000円〜</span>
-                                </div>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">訪問着レンタル</span>
-                                    <span class="font-bold text-charcoal-text">15,000円〜</span>
-                                </div>
-                            </li>
-                            <li class="pt-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">訪問着着付け（簡易ヘア付き）</span>
-                                    <span class="font-bold text-charcoal-text">10,000円</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- オンライン着物カタログ 案内カード -->
-                    <div class="mt-6 p-5 rounded-2xl bg-white border-2 border-gold-matte/70 shadow-md text-xs space-y-3">
-                        <div class="flex items-center justify-between border-b border-bg-cream-soft pb-2.5">
-                            <div class="font-bold text-charcoal-text text-sm flex items-center gap-2">
-                                <i class="fa-solid fa-book-open text-gold-matte text-base"></i>
-                                <span>キモノカタログ（WEB提携衣装一覧）</span>
-                            </div>
-                            <span class="px-2.5 py-0.5 rounded-full bg-gold-soft/40 text-gold-dark text-[10px] font-bold">WEBカタログ</span>
-                        </div>
-                        
-                        <p class="text-[11px] text-muted-text leading-relaxed">
-                            豊富なデザインからお好みのお着物をWEB上でご覧いただけます。<br>
-                            以下のボタンより提携カタログサイトへアクセスし、ログインIDとパスワードをご入力ください。
-                        </p>
-
-                        <!-- ID / Password Badge Box -->
-                        <div class="p-3 bg-bg-cream rounded-xl border border-gold-soft flex flex-wrap items-center justify-between gap-3">
-                            <div class="flex items-center gap-4 text-xs">
-                                <div>
-                                    <span class="text-[10px] text-muted-text block font-semibold">【ログインID】</span>
-                                    <span class="font-bold text-charcoal-text text-sm tracking-wider bg-white px-2.5 py-0.5 rounded border border-[#E2DDD7] select-all">1234</span>
-                                </div>
-                                <div>
-                                    <span class="text-[10px] text-muted-text block font-semibold">【パスワード】</span>
-                                    <span class="font-bold text-charcoal-text text-sm tracking-wider bg-white px-2.5 py-0.5 rounded border border-[#E2DDD7] select-all">001</span>
-                                </div>
-                            </div>
-                            <a href="https://kimono-c.jp/login/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-gold hover:bg-gold-dark text-white font-bold text-xs shadow-xs transition-all transform hover:-translate-y-0.5">
-                                <span>キモノカタログを見る</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
-                        </div>
-
-                        <div class="text-[10px] text-muted-text flex items-start gap-1 pt-1">
-                            <i class="fa-solid fa-circle-info text-gold-matte mt-0.5"></i>
-                            <span>気になったお着物がございましたら、お着物番号やスクリーンショットを公式LINEにてお送りください。</span>
-                        </div>
-                    </div>
-
-                    <!-- 備考欄 -->
-                    <div class="mt-4 p-4 rounded-2xl bg-white border border-gold-soft/80 shadow-xs text-xs space-y-2">
-                        <div class="font-bold text-gold-dark flex items-center gap-1.5 border-b border-bg-cream-soft pb-1.5">
-                            <i class="fa-solid fa-circle-info text-gold-matte"></i> 着物レンタルに関する備考・ご注意点
-                        </div>
-                        <ul class="space-y-1.5 text-[11px] text-muted-text leading-relaxed">
-                            <li class="flex items-start gap-1.5">
-                                <span class="text-gold-matte font-bold">・</span>
-                                <span><strong>自社・外部サービス対応：</strong>自社取り扱いのお着物に加え、豊富なデザインから選べる外部提携レンタルサービス（キモノカタログ）もご用意しております。</span>
-                            </li>
-                            <li class="flex items-start gap-1.5">
-                                <span class="text-gold-matte font-bold">・</span>
-                                <span><strong>自社着物：</strong>自社着物は、<a href="https://www.instagram.com/noa.photo33/" target="_blank" rel="noopener noreferrer" class="text-gold-dark font-bold underline hover:text-accent-gold">Instagramハイライト <i class="fa-brands fa-instagram"></i></a> からご覧頂けます。</span>
-                            </li>
-                            <li class="flex items-start gap-1.5">
-                                <span class="text-gold-matte font-bold">・</span>
-                                <span><strong>七五三着物料金ランク：</strong>七五三の着物レンタルは、衣装のクオリティやブランドに応じた<strong>【A〜Dランク】</strong>の料金設定となっております。</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-16 bg-white relative">
+    <!-- 9. FAQ (よくあるご質問) -->
+    <section id="faq" class="py-16 bg-white border-t border-[#E2DDD7] relative">
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-12">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-cream-soft border border-gold-soft text-[11px] font-bold text-ash-grey mb-2">
@@ -1192,7 +1206,7 @@
         </div>
     </section>
 
-    <!-- SECTION: CTA / CONTACT -->
+    <!-- 10. LINE (ご予約・ご相談 CTA) -->
     <section id="cta" class="py-16 md:py-24 bg-gradient-to-b from-white via-bg-cream to-bg-cream-soft relative border-t border-[#E2DDD7]">
         <div class="max-w-4xl mx-auto px-4 text-center">
             
@@ -1244,12 +1258,12 @@
                     <p class="text-[11px] text-gray-400 mt-1">拠点：広島市東区戸坂（出張エリア：広島市内全域・安芸郡府中周辺）</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-6 text-gray-400">
-                    <a href="#about" class="hover:text-gold-matte transition-colors">強み</a>
                     <a href="#plans" class="hover:text-gold-matte transition-colors">プラン</a>
-                    <a href="#flow" class="hover:text-gold-matte transition-colors">ご利用の流れ</a>
-                    <a href="#simulator" class="hover:text-gold-matte transition-colors">料金計算</a>
+                    <a href="#about" class="hover:text-gold-matte transition-colors">強み</a>
                     <a href="#voice" class="hover:text-gold-matte transition-colors">お客様の声</a>
-                    <a href="#area" class="hover:text-gold-matte transition-colors">出張エリア</a>
+                    <a href="#options" class="hover:text-gold-matte transition-colors">オプション</a>
+                    <a href="#simulator" class="hover:text-gold-matte transition-colors">料金計算</a>
+                    <a href="#area" class="hover:text-gold-matte transition-colors">出張エリア・流れ</a>
                     <a href="#faq" class="hover:text-gold-matte transition-colors">FAQ</a>
                 </div>
             </div>
