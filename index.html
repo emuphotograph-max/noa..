@@ -750,9 +750,9 @@
                         </li>
                         <li class="flex justify-between items-center pt-3">
                             <div>
-                                <span class="font-medium block">デザインアルバム</span>
+                                <span class="font-medium block">見開きデザインアルバム</span>
                             </div>
-                            <span class="font-bold text-charcoal-text">20,000円～</span>
+                            <span class="font-bold text-charcoal-text">20,000円</span>
                         </li>
                     </ul>
                 </div>
@@ -1004,9 +1004,9 @@
                             <label class="flex items-center justify-between p-2.5 rounded-xl border border-[#E2DDD7] bg-bg-cream cursor-pointer">
                                 <div class="flex items-center gap-2">
                                     <input type="checkbox" id="optAlbum" class="accent-gold-matte" onchange="calculateEstimate()">
-                                    <span>デザインアルバム</span>
+                                    <span>見開きデザインアルバム制作</span>
                                 </div>
-                                <span class="font-bold text-charcoal-text">+20,000円～</span>
+                                <span class="font-bold text-charcoal-text">+20,000円</span>
                             </label>
                         </div>
                     </div>
@@ -1460,15 +1460,21 @@
 
         // LINEコピー＆移動関数
         function sendEstimateToLine() {
-            if (navigator.clipboard && currentEstimateSummary) {
+            if (!currentEstimateSummary) calculateEstimate();
+
+            if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(currentEstimateSummary).then(() => {
-                    alert("見積もり内容をコピーしました！LINEのトーク画面に貼り付けてお送りください。");
+                    alert("見積もり内容をコピーしました！\nLINEが開きますので、トーク画面で「貼り付け」してお送りください。");
                     window.open('https://lin.ee/spAavvg', '_blank');
                 }).catch(() => {
-                    window.open('https://lin.ee/spAavvg', '_blank');
+                    // Fallback using standard LINE URI schemes
+                    const lineShareUrl = 'https://line.me/R/msg/text/?' + encodeURIComponent(currentEstimateSummary);
+                    window.open(lineShareUrl, '_blank');
                 });
             } else {
-                window.open('https://lin.ee/spAavvg', '_blank');
+                // Fallback using standard LINE URI schemes for non-HTTPS or unsupported browsers
+                const lineShareUrl = 'https://line.me/R/msg/text/?' + encodeURIComponent(currentEstimateSummary);
+                window.open(lineShareUrl, '_blank');
             }
         }
 
