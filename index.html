@@ -1353,8 +1353,8 @@
 
             let basePrice = 30000;
             if (planVal === '20000_summer') basePrice = 20000;
-            else if (planVal === '35000_753' || planVal === '35000_seijin') basePrice = 35000;
-            else if (planVal === '111000') basePrice = 111000;
+            else if (planVal === '35000_753' || planVal === '50000_seijin') basePrice = 35000;
+            else if (planVal === '126000') basePrice = 126000;
 
             const isWeekend = document.querySelector('input[name="simDay"]:checked').value === 'weekend';
             const weekendFee = isWeekend ? 5000 : 0;
@@ -1415,7 +1415,7 @@
             if (optKimonoRent753) {
                 total += 10000;
                 breakdownHtml += `<div class="flex justify-between"><span>七五三 着物レンタル</span><span>+¥10,000〜</span></div>`;
-                summaryList.push("【オプション】七五三 着物レンタル (+¥10,000〜)");
+                summaryList.push("【オプション】七五三 着物レンタル (+¥13,000〜)");
             }
 
             if (optMomHoumongiRental) {
